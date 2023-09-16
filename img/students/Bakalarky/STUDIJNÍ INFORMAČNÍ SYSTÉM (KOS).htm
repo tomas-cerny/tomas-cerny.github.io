@@ -1,0 +1,2012 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0075)https://kos.cvut.cz/kos/vskpProfesor.do?page=a77fff5cb614bb72ea4efbb326377c -->
+<html lang="en" class="gr__kos_cvut_cz"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="content-language" content="cz">
+<meta name="GENERATOR" content="IBM WebSphere Studio">
+<title>STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)</title>
+	
+
+	<link type="text/css" rel="stylesheet" href="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/jquery-ui.css">
+	<script async="" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/analytics.js"></script><script type="text/javascript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/jquery-ui-1.10.2.js"></script>
+	<link rel="stylesheet" href="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/bootstrap.min.css">
+	<script src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/bootstrap.min.js"></script>
+	<script src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/bootstrap-tooltip.js"></script>
+
+<link rel="icon" type="image/jpg" sizes="16x16" href="https://kos.cvut.cz/kos/images/CVUT/logo_cvut.jpg">
+	<link rel="stylesheet" type="text/css" href="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/pages.css">
+	<link rel="stylesheet" type="text/css" href="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/page_cvut.css">
+	<link rel="stylesheet" type="text/css" href="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/menu6.css">
+
+
+	
+
+	<style>
+		.ui-autocomplete { max-height: 200px; overflow-y: auto; /* prevent horizontal scrollbar */	overflow-x: hidden; 	}
+		
+		/*KOSI osetrenie problemu nechceneho zobrazenia kalendaru na konci stranky*/ #ui-datepicker-div { display: none; }
+		/*KOSI kalendar dni vikendu (hore)*/ .ui-datepicker-week-end {color:#f00; background: #ccddee;}
+		/*KOSI kalendar dni vikendu (dole)*/ .ui-widget-content .ui-state-disabled { opacity: .99; }
+		/*KOSI bacground kalendara*/ .ui-widget-content { border: 2px solid #aaaaaa/*{borderColorContent}*/; background: #ffffff/*{bgColorContent}*/ ; color: #222222/*{fcContent}*/; }
+		/*KOSI headpanel mesiac rok*/ .ui-widget-header { border: 1px solid #aaaaaa/*{borderColorHeader}*/; background: #bbccdd/*{bgColorHeader}*/ ; color: #222222/*{fcHeader}*/; font-weight: bold; }
+		/*KOSI zobrazene dni*/ .ui-widget-content .ui-state-default { border: 1px solid #d3d3d3/*{borderColorDefault}*/; background: #ddeeff/*{bgColorDefault}*/; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcDefault}*/; }
+		/*KOSI den pod myskou*/ .ui-widget-content .ui-state-hover, .ui-widget-content .ui-state-focus { border: 1px solid #999999/*{borderColorHover}*/; background: #bbccdd/*{bgColorHover}*/ ; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcHover}*/; }
+		/*KOSI aktualny zvyrazneny den*/ .ui-widget-content .ui-state-highlight {border: 1px solid #333333/*{borderColorHighlight}*/; background: #ffe1ff/*{bgColorHighlight}*/ ; color: #363636/*{fcHighlight}*/; }
+		/*KOSI zvoleny zvyrazneny den*/ .ui-widget-content .ui-state-active { border: 1px solid #aaaaaa/*{borderColorActive}*/; background: #ffffff/*{bgColorActive}*/ url(images/ui-bg_glass_65_ffffff_1x400.png)/*{bgImgUrlActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcActive}*/; }
+		
+	</style>
+
+
+
+	<script language="JavaScript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/formulartools.js"></script>
+	<script>
+		$(function() {
+			$('input').filter('.datepicker').datepicker({
+				showOn: "button",
+				buttonImage: "images/calendar.gif",
+				buttonImageOnly: true,
+//				buttonText: "Datepicker form",
+				dateFormat: 'dd.mm.yy',
+				firstDay: 1,
+				monthNames:  ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'], 
+				dayNames:  ['Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota'], 
+				dayNamesMin:  ['Ne','Po','Út','St','Čt','Pá','So']
+			});
+		});
+
+		$(function() {
+			$('.inputText').focusout(function () {
+				var jqObj=$(this);
+				var textObj=this;
+				var position0 = null;
+				
+				position0 = existTextWin1250(textObj);
+				
+				
+				if (position0!=null) {
+					if (confirm('V textu byl nalezen jeden nebo více znaků z jiného kódovaní které je možné nahradit ekvivalenty z ISO Latin2 (ISO 8859-2). Přejete si tyto znaky automaticky zkonvertovat? ')){
+						convertTextWin1250ToISO88592(textObj);
+						alert('Převoditelné znaky byly v textu nahrazeny.');
+					}
+				}
+				//var position1 = getNoISO88592charFirstBlockPosition(textObj);
+				var position1 = null;
+				var position2 = getNoISO88592charEndBlockPosition(textObj, position1);
+				if (position1!=null) {
+					alert('V textu se nachází jeden nebo více nepovolených znaků. Prosím nahraďte nebo odstraňte tyto znaky!');
+					setTimeout( function () { jqObj.focus(); textObj.setSelectionRange(position1,position2);}, 200);   
+					return false;
+				} 
+			});
+		});
+	</script>
+
+
+<script language="JavaScript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/browser.js"></script>
+<script language="JavaScript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/linker.js"></script>
+<script language="JavaScript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/menu.js"></script>
+<script language="JavaScript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/help.js"></script>
+<script language="JavaScript" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/wait.js"></script>
+<script>
+	<!--
+	function setAkademickyRok()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_changeRoky";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function setFakulta()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_changeFakulty";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function setKatedra()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_changeKatedry";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function setTypPrace()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_changeTypPrace";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function setStavPrace()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "-"; //prazdna akcia ale nesmie vojst do bloku first visit koli zachovaniu value checkboxu
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function setRola()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_changeRoly";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function setAktivniStudia()
+	{
+	 	showWait();
+		document.vskpProfesor.action.value = "-"; //prazdna akcia ale nesmie vojst do bloku first visit koli zachovaniu value checkboxu
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+	function detailVSKP(vskpId)
+	{
+		showWait();
+		document.vskpProfesor.vskpId.value = vskpId;
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_view";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+
+	function posudokVSKP(vskpId)
+	{
+		showWait();
+		document.vskpProfesor.vskpId.value = vskpId;
+		document.vskpProfesor.action.value = "VskpCVUTAction(Profesor)_review_view";
+		if (document.forms['vskpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['vskpProfesor'].attributes["action"].nodeValue = document.forms['vskpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.vskpProfesor.submit();
+	}
+
+	function printPart(dissertationId, part)
+	{
+		showWait();
+		document.finaldissertation.part.value = part;
+		document.finaldissertation.dissertationId.value = dissertationId;
+		document.finaldissertation.action.value = "printpart";
+		if (document.forms['finaldissertation'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['finaldissertation'].attributes["action"].nodeValue = document.forms['finaldissertation'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.finaldissertation.submit();
+	}
+
+	function documentTiskZadaniPDF(id) {
+		alert("ole :)");
+		window.open("/kos/rest/rtzp/zavPracePDF?stud_id="+id);
+	}
+	
+	function onPageLoad()
+	{
+		menu.joinMenu(-1);
+		StartClock();
+	}
+
+	//-->
+	</script>
+
+<script>
+		
+			var pageCode='a77fff5cb614bb72ea4efbb326377c';
+		
+			var appName = '/kos';
+	</script>
+
+<script language="JavaScript">
+<!--
+var menu = new Menu(150, 60, 1, 6, 1, 5, 5, 5, 9, 100, 200);
+menu.add("Domů", "javascript:showWait();window.open('"+appName+"/toWelcome.do?page="+pageCode+"','_self')", "txt", 1, -1, "#ffffff", "#cc0033");
+menu.add("Předměty", "", "txt", 2, -1, "#ffffff", "#cc0033");
+menu.add("Prezenční seznamy", "javascript:showWait();window.open('"+appName+"/studentprezsez.do?page="+pageCode+"','_self')", "txt", 21, 2, "#99ccff", "#cc0033");
+menu.add("Editace textů předmětů", "javascript:showWait();window.open('"+appName+"/textSubject.do?page="+pageCode+"','_self')", "txt", 22, 2, "#99ccff", "#cc0033");
+menu.add("Zkoušky", "", "txt", 3, -1, "#ffffff", "#cc0033");
+menu.add("Vypisování termínů", "javascript:showWait();window.open('"+appName+"/terminy.do?page="+pageCode+"','_self')", "txt", 31, 3, "#99ccff", "#cc0033");
+menu.add("Přehled vypsaných termínů", "javascript:showWait();window.open('"+appName+"/prehledVypsanychTerminu.do?page="+pageCode+"','_self')", "txt", 32, 3, "#99ccff", "#cc0033");
+menu.add("Přehled přihlášených studentů na termín", "javascript:showWait();window.open('"+appName+"/previewsStudents.do?page="+pageCode+"','_self')", "txt", 33, 3, "#99ccff", "#cc0033");
+menu.add("Zápis známky dle vypsaného zkouškového termínu", "javascript:showWait();window.open('"+appName+"/writeTerm.do?page="+pageCode+"','_self')", "txt", 34, 3, "#99ccff", "#cc0033");
+menu.add("Zápis známky studentovi (bez vypsaného termínu)	", "javascript:showWait();window.open('"+appName+"/writeStudent.do?page="+pageCode+"','_self')", "txt", 35, 3, "#99ccff", "#cc0033");
+menu.add("Vyhodnocení klasifikovanosti předmětu", "javascript:showWait();window.open('"+appName+"/examsOverview.do?page="+pageCode+"','_self')", "txt", 36, 3, "#99ccff", "#cc0033");
+menu.add("Zápočty", "", "txt", 4, -1, "#ffffff", "#cc0033");
+menu.add("Vypisování termínů", "javascript:showWait();window.open('"+appName+"/terminy.do?page="+pageCode+"','_self')", "txt", 41, 4, "#99ccff", "#cc0033");
+menu.add("Přehled přihlášených studentů na termín", "javascript:showWait();window.open('"+appName+"/creditsPreviewStudents.do?page="+pageCode+"','_self')", "txt", 42, 4, "#99ccff", "#cc0033");
+menu.add("Zápis zápočtu dle termínu", "javascript:showWait();window.open('"+appName+"/writeCreditsTerm.do?page="+pageCode+"','_self')", "txt", 43, 4, "#99ccff", "#cc0033");
+menu.add("Zápis zápočtu dle předmětu", "javascript:showWait();window.open('"+appName+"/writeCredits.do?page="+pageCode+"','_self')", "txt", 44, 4, "#99ccff", "#cc0033");
+menu.add("Klasifikované zápočty", "", "txt", 5, -1, "#ffffff", "#cc0033");
+menu.add("Vypisování termínů", "javascript:showWait();window.open('"+appName+"/terminy.do?page="+pageCode+"','_self')", "txt", 51, 5, "#99ccff", "#cc0033");
+menu.add("Přehled přihlášených studentů na termín", "javascript:showWait();window.open('"+appName+"/clasifyCreditsPreviewsStudents.do?page="+pageCode+"','_self')", "txt", 52, 5, "#99ccff", "#cc0033");
+menu.add("Zápis klasifikovaného zápočtu dle termínu", "javascript:showWait();window.open('"+appName+"/writeClasifyCreditsTerm.do?page="+pageCode+"','_self')", "txt", 53, 5, "#99ccff", "#cc0033");
+menu.add("Zápis klasifikovaného zápočtu dle předmětu", "javascript:showWait();window.open('"+appName+"/writeClasifyCredits.do?page="+pageCode+"','_self')", "txt", 54, 5, "#99ccff", "#cc0033");
+menu.add("Akce", "", "txt", 6, -1, "#ffffff", "#cc0033");
+menu.add("Jednorázové akce", "javascript:showWait();window.open('"+appName+"/oneShotActions.do?page="+pageCode+"','_self')", "txt", 61, 6, "#99ccff", "#cc0033");
+menu.add("Přehled studentů dle akce", "javascript:showWait();window.open('"+appName+"/oneShotActionStudents.do?page="+pageCode+"','_self')", "txt", 62, 6, "#99ccff", "#cc0033");
+menu.add("Vyhodnocení akce", "javascript:showWait();window.open('"+appName+"/oneShotActionResults.do?page="+pageCode+"','_self')", "txt", 63, 6, "#99ccff", "#cc0033");
+menu.add("Historie klasifikace", "javascript:showWait();window.open('"+appName+"/resultsHistory.do?page="+pageCode+"','_self')", "txt", 7, -1, "#ffffff", "#cc0033");
+menu.add("Ostatní", "", "txt", 8, -1, "#ffffff", "#cc0033");
+menu.add("Rámcová témata záverečných prací", "javascript:showWait();window.open('"+appName+"/rtzpProfesor.do?page="+pageCode+"','_self')", "txt", 81, 8, "#99ccff", "#cc0033");
+menu.add("Témata záverečných prací", "javascript:showWait();window.open('"+appName+"/tzpProfesor.do?page="+pageCode+"','_self')", "txt", 82, 8, "#99ccff", "#cc0033");
+menu.add("Moje závěrečné práce", "javascript:showWait();window.open('"+appName+"/vskpProfesor.do?page="+pageCode+"','_self')", "txt", 83, 8, "#99ccff", "#cc0033");
+menu.add("Časové omezení učitele", "javascript:showWait();window.open('"+appName+"/casoveOmezeniUcitele.do?page="+pageCode+"','_self')", "txt", 84, 8, "#99ccff", "#cc0033");
+menu.add("Školitel", "", "txt", 9, -1, "#ffffff", "#cc0033");
+menu.add("Moji doktorandi", "javascript:showWait();window.open('"+appName+"/myDoctorands.do?page="+pageCode+"','_self')", "txt", 91, 9, "#99ccff", "#cc0033");
+menu.add("Seznam ISP mých doktorandů", "javascript:showWait();window.open('"+appName+"/sezIsp.do?page="+pageCode+"','_self')", "txt", 92, 9, "#99ccff", "#cc0033");
+menu.add("Změna role", "javascript:showWait();window.open('"+appName+"/multilogin.do?page="+pageCode+"','_self')", "txt", 10, -1, "#ffffff", "#cc0033");
+menu.add("Odhlášení SSO", "javascript:showWait();window.open('"+appName+"/logout.do?page="+pageCode+"&LogoutAction_logoutClick=CERNYTO3','_self')", "txt", 11, -1, "#ffffff", "#cc0033");
+menu.createMenu();
+//-->
+</script></head><body onunload="KillClock();" marginwidth="0" marginheight="0" onload="onPageLoad();" onmousedown="menu.hideAll();" onfocus="menu.hideAll();" onresize="menu.refresh();" data-gr-c-s-loaded="true"><span class="toolbarlow" id="menu-1item1normal" style="width: 54px; left: 150px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item1normaltext" style="top: 1.5px;">Domů</span></span><span class="toolbarlow" id="menu-1item2normal" style="width: 75px; left: 204px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item2normaltext" style="top: 1.5px;">Předměty</span></span><span class="toolbarlow" id="menu-1item3normal" style="width: 69px; left: 279px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item3normaltext" style="top: 1.5px;">Zkoušky</span></span><span class="toolbarlow" id="menu-1item4normal" style="width: 66px; left: 348px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item4normaltext" style="top: 1.5px;">Zápočty</span></span><span class="toolbarlow" id="menu-1item5normal" style="width: 145px; left: 414px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item5normaltext" style="top: 1.5px;">Klasifikované zápočty</span></span><span class="toolbarlow" id="menu-1item6normal" style="width: 49px; left: 559px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item6normaltext" style="top: 1.5px;">Akce</span></span><span class="toolbarlow" id="menu-1item7normal" style="width: 129px; left: 608px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item7normaltext" style="top: 1.5px;">Historie klasifikace</span></span><span class="toolbarlow" id="menu-1item8normal" style="width: 61px; left: 737px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item8normaltext" style="top: 1.5px;">Ostatní</span></span><span class="toolbarlow" id="menu-1item9normal" style="width: 63px; left: 798px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item9normaltext" style="top: 1.5px;">Školitel</span></span><span class="toolbarlow" id="menu-1item10normal" style="width: 84px; left: 861px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item10normaltext" style="top: 1.5px;">Změna role</span></span><span class="toolbarlow" id="menu-1item11normal" style="width: 107px; left: 945px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item11normaltext" style="top: 1.5px;">Odhlášení SSO</span></span><span class="columnlow" id="menu2item21normal" style="width: 153px; left: 205px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu2item21normaltext" style="top: 1.5px;">Prezenční seznamy</span><span class="arrow" id="menu2item21normalpicture" style="left: 158px; top: 5.5px;"><img name="menu2item21normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu2item22normal" style="width: 153px; left: 205px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu2item22normaltext" style="top: 1.5px;">Editace textů předmětů</span><span class="arrow" id="menu2item22normalpicture" style="left: 158px; top: 5.5px;"><img name="menu2item22normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu3item31normal" style="width: 312px; left: 280px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item31normaltext" style="top: 1.5px;">Vypisování termínů</span><span class="arrow" id="menu3item31normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item31normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu3item32normal" style="width: 312px; left: 280px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item32normaltext" style="top: 1.5px;">Přehled vypsaných termínů</span><span class="arrow" id="menu3item32normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item32normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu3item33normal" style="width: 312px; left: 280px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item33normaltext" style="top: 1.5px;">Přehled přihlášených studentů na termín</span><span class="arrow" id="menu3item33normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item33normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu3item34normal" style="width: 312px; left: 280px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item34normaltext" style="top: 1.5px;">Zápis známky dle vypsaného zkouškového termínu</span><span class="arrow" id="menu3item34normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item34normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu3item35normal" style="width: 312px; left: 280px; top: 166px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item35normaltext" style="top: 1.5px;">Zápis známky studentovi (bez vypsaného termínu)	</span><span class="arrow" id="menu3item35normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item35normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu3item36normal" style="width: 312px; left: 280px; top: 186px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item36normaltext" style="top: 1.5px;">Vyhodnocení klasifikovanosti předmětu</span><span class="arrow" id="menu3item36normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item36normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu4item41normal" style="width: 253px; left: 349px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item41normaltext" style="top: 1.5px;">Vypisování termínů</span><span class="arrow" id="menu4item41normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item41normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu4item42normal" style="width: 253px; left: 349px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item42normaltext" style="top: 1.5px;">Přehled přihlášených studentů na termín</span><span class="arrow" id="menu4item42normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item42normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu4item43normal" style="width: 253px; left: 349px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item43normaltext" style="top: 1.5px;">Zápis zápočtu dle termínu</span><span class="arrow" id="menu4item43normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item43normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu4item44normal" style="width: 253px; left: 349px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item44normaltext" style="top: 1.5px;">Zápis zápočtu dle předmětu</span><span class="arrow" id="menu4item44normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item44normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu5item51normal" style="width: 272px; left: 415px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item51normaltext" style="top: 1.5px;">Vypisování termínů</span><span class="arrow" id="menu5item51normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item51normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu5item52normal" style="width: 272px; left: 415px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item52normaltext" style="top: 1.5px;">Přehled přihlášených studentů na termín</span><span class="arrow" id="menu5item52normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item52normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu5item53normal" style="width: 272px; left: 415px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item53normaltext" style="top: 1.5px;">Zápis klasifikovaného zápočtu dle termínu</span><span class="arrow" id="menu5item53normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item53normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu5item54normal" style="width: 272px; left: 415px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item54normaltext" style="top: 1.5px;">Zápis klasifikovaného zápočtu dle předmětu</span><span class="arrow" id="menu5item54normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item54normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu6item61normal" style="width: 169px; left: 560px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu6item61normaltext" style="top: 1.5px;">Jednorázové akce</span><span class="arrow" id="menu6item61normalpicture" style="left: 174px; top: 5.5px;"><img name="menu6item61normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu6item62normal" style="width: 169px; left: 560px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu6item62normaltext" style="top: 1.5px;">Přehled studentů dle akce</span><span class="arrow" id="menu6item62normalpicture" style="left: 174px; top: 5.5px;"><img name="menu6item62normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu6item63normal" style="width: 169px; left: 560px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu6item63normaltext" style="top: 1.5px;">Vyhodnocení akce</span><span class="arrow" id="menu6item63normalpicture" style="left: 174px; top: 5.5px;"><img name="menu6item63normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu8item81normal" style="width: 223px; left: 738px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item81normaltext" style="top: 1.5px;">Rámcová témata záverečných prací</span><span class="arrow" id="menu8item81normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item81normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu8item82normal" style="width: 223px; left: 738px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item82normaltext" style="top: 1.5px;">Témata záverečných prací</span><span class="arrow" id="menu8item82normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item82normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu8item83normal" style="width: 223px; left: 738px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item83normaltext" style="top: 1.5px;">Moje závěrečné práce</span><span class="arrow" id="menu8item83normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item83normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu8item84normal" style="width: 223px; left: 738px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item84normaltext" style="top: 1.5px;">Časové omezení učitele</span><span class="arrow" id="menu8item84normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item84normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu9item91normal" style="width: 192px; left: 799px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu9item91normaltext" style="top: 1.5px;">Moji doktorandi</span><span class="arrow" id="menu9item91normalpicture" style="left: 197px; top: 5.5px;"><img name="menu9item91normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span><span class="columnlow" id="menu9item92normal" style="width: 192px; left: 799px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu9item92normaltext" style="top: 1.5px;">Seznam ISP mých doktorandů</span><span class="arrow" id="menu9item92normalpicture" style="left: 197px; top: 5.5px;"><img name="menu9item92normalimage" width="5" height="9" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/blank.gif"></span></span>
+
+
+
+<script>
+
+
+var keep = false;
+var confirmation = false;
+
+var clockID = 0;
+var responseTime = 0;
+var title = document.title;
+var timeLimit = document.getElementById("sessionLimit");
+var maxInactiveInterval = 1200;
+var wasStopped = false;
+var	hasInnerText = false;	
+
+
+function ajaxRequest (url) {
+    var http_request = false;
+	var session_active = false;
+    if (window.XMLHttpRequest) { // Mozilla, Safari, Opera, Konqueror...
+        http_request = new XMLHttpRequest();
+    } else if (window.ActiveXObject) { // Internet Explorer
+        try {
+            http_request = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                http_request = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+				alert('Error creating the request object for MS IE!');
+			}
+        }
+    }
+
+    if (!http_request) {
+        alert('Connection ERROR!');
+        return false;
+    }
+	try {
+	    http_request.open('GET', appName + url, false);
+	    http_request.send(null);
+	    if (http_request.readyState == 4) {
+	        if (http_request.status == 200) {
+	            if (http_request.responseText=='session active'){
+					return true;
+				}
+	        } 
+	    }
+		alert('Chyba komunikace při pokusu obnovení relace! Server odmítl požadavek. ' + '\n\n' + '(ReadyState = ' + http_request.readyState + ', Status = ' + http_request.status + ', ResponseText = ' + http_request.responseText + ')');
+		keep=false;
+		confirmation=true;
+		return false;
+    } catch (e) {
+		alert('Chyba komunikace při pokusu obnovení relace! Server odmítl požadavek. ' + '\n\n' + e);
+		keep=false;
+		confirmation=true;
+		return false;
+	}
+
+}
+
+function UpdateClock() {
+	if(clockID) {
+		clearTimeout(clockID);
+		clockID  = 0;
+	}
+	var dateObject = new Date();
+	var sessionTime = (responseTime - Math.round(dateObject.getTime()/1000));
+//	document.title = title + " - " + Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+	if (hasInnerText){
+		timeLimit.innerText = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+	}else{
+		timeLimit.textContent = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+	}
+
+	if (sessionTime < 301){
+		if (keep==true){
+			if (ajaxRequest('/session.do')){
+				responseTime = Math.round(dateObject.getTime()/1000) + maxInactiveInterval;
+			}
+		}else if (confirmation==false){
+			confirmation=true;
+			var r=confirm('Aplikace za malou chvíli ztratí spojení na server a budete nuceni se znovu přihlásit. Přejete si zapnout funkci "Trvalé přihlášení" ?' + '\n\n' + '( Nastavení je možné později změnit volbou "Trvalé přihlášení" na úvodní stránce. Nastavení je dočasné a platí pouze do opuštění (odhlášení) aplikace. ) ' + '\n\n' + 'Udržovat relaci? ');
+			if (r==true){
+				if (ajaxRequest('/session.do?keepSession=true')){
+					responseTime = Math.round(dateObject.getTime()/1000) + maxInactiveInterval;
+					keep=true;
+				}
+	  		}else{
+				if (ajaxRequest('/session.do?keepSession=false')){
+					responseTime = Math.round(dateObject.getTime()/1000) + maxInactiveInterval;
+		  			keep=false;
+				}
+	  		}
+			var sessionKeepCheckbox = document.getElementById('sessionKeepCheck');
+			if (sessionKeepCheckbox!=null) sessionKeepCheckbox.checked = keep;
+		}
+	}
+	
+	if (sessionTime > 0){
+		clockID = setTimeout("UpdateClock()", 1000);
+	}else {
+//		document.title = title + " - " + Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec !session lost! ";
+		if (hasInnerText){
+			timeLimit.innerText = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+		}else{
+			timeLimit.textContent = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+		}
+		wasStopped = true;
+	}
+}
+
+function setSessionTimeManualy() {
+
+	if (keep){
+//		var r=confirm('');
+//		if (r==true){
+			if (ajaxRequest('/session.do?keepSession=false')){
+				responseTime = Math.round((new Date()).getTime()/1000) + maxInactiveInterval;
+				confirmation=true;
+				keep=false;
+			}
+//		}
+	}else{
+//		var r=confirm('');
+//		if (r==true){
+			if (ajaxRequest('/session.do?keepSession=true')){
+				responseTime = Math.round((new Date()).getTime()/1000) + maxInactiveInterval;
+				confirmation=true;
+				keep=true;
+				if (wasStopped) clockID = setTimeout("UpdateClock()", 1000);
+			}
+//		}
+	}
+	var sessionKeepCheckbox = document.getElementById('sessionKeepCheck');
+	if (sessionKeepCheckbox!=null) sessionKeepCheckbox.checked = keep;
+}
+
+function getKeep() {
+	return keep;
+}
+
+function StartClock() {
+	responseTime = Math.round((new Date()).getTime()/1000) + 1200
+	clockID = setTimeout("UpdateClock()", 500);
+	if (timeLimit==null) timeLimit = document.getElementById("sessionLimit");
+	hasInnerText = (timeLimit.innerText != undefined) ? true : false;
+}
+
+function KillClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+}
+</script>
+
+ 
+
+
+
+
+	
+	
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td class="headerBgColor">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					
+
+
+
+
+
+
+
+	 				<tbody><tr>
+					<td width="25" height="85" rowspan="2"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="25" height="85"></td>
+					<td width="100" height="85" rowspan="2"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/logo.gif" width="100" height="85"></td>
+					<td width="25" height="85" rowspan="2"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="25" height="85"></td>
+					<td width="100%"> 
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td class="pageTitle" height="45" valign="bottom" nowrap="nowrap">STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)</td>
+
+								<td class="versionNumber" align="right" valign="top" style="padding-top: 16px" nowrap="nowrap"><span id="sessionLimit">19min 50sec </span>&nbsp;&nbsp;KOSI ver.: 18_07_02 b. 2589<br>&nbsp;&nbsp;DB ver.: CVUT (18.06.15243)</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+
+			
+			
+
+
+					<tr>
+						<td class="pageLocation" width="100%" height="40" align="right">Státní zkoušky / Závěrečné práce</td>
+						<td class="pageLocation" width="25" height="40"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="25" height="40"></td>
+					</tr>
+					
+<!--  
+		<tr id="notSupportedBrowser"  name="notSupportedBrowser">
+			<td align="left" colspan="5">
+				<div class="alert alert-warning">
+					<img src="images/!.png" style="padding-right:10px; vertical-align: middle"/>
+					<span style="line-height:27px; vertical-align: middle;">
+						Internetový prohlížeč, který používáte, není v aplikaci KOS podporován. Může se stát, že některé funkce nebudou fungovat správně. Bližší informace získáte <a href="http://intranet.cvut.cz/informace-pro-studenty/is/kos/pristup">zde</a>
+					</span>
+					<input type="button" id="notCookies" name="notCookies" value="Již nezobrazovat" onClick="closeInfo();"/>&nbsp;&nbsp;
+					<br>
+					<span id="browserNameVerion"  name="browserNameVerion"  style="line-height:12px; vertical-align: middle;font-size: 10px;">
+						
+					</span>
+				</div>
+			</td>
+		</tr>
+-->
+<tr id="notSupportedBrowser" name="notSupportedBrowser" style="display: none;">
+			<td colspan="5" class="information" style="width:100%">
+				<p style="vertical-align: middle;padding-right:5px;">
+					<img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/!.png" style="padding-right:10px; vertical-align: middle">
+					Internetový prohlížeč, který používáte, není v aplikaci KOS podporován. Může se stát, že některé funkce nebudou fungovat správně. Bližší informace získáte <a href="http://intranet.cvut.cz/informace-pro-studenty/is/kos/pristup">zde</a>
+					<br>
+					<span id="browserNameVerion" name="browserNameVerion" style="line-height:12px;text-align:left;font-size: 10px;">
+					
+					</span>
+					<input type="button" id="notCookies" name="notCookies" value="Již nezobrazovat" onclick="closeInfo();" style="margin-left: 10px; display: none;">
+				</p>
+			</td>
+		</tr>
+
+
+			
+
+<script src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/jquery-migrate-1.2.1.js"></script>
+<script src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/jquery.cookie.js"></script>
+<script>
+var minimumFirefox=33;
+var minimumSafari=7;
+var minimumChrome=39;
+var minimumIE=11;
+
+	var supported = true;
+	var cookiesSupportBrowser=true;
+	if(bowser.name=="Microsoft Edge"){
+		
+	}else if(bowser.name=="Internet Explorer"){
+		if(bowser.version<minimumIE){
+			supported = false;
+		}
+	}else if(bowser.name=="Firefox"){
+		if(bowser.version<minimumFirefox){
+			supported = false;
+		}
+	}else if(bowser.name=="Safari"){
+		if(bowser.version<minimumSafari){
+			supported = false;
+		}
+	}else if(bowser.name=="iPad"){
+		if(bowser.version<minimumSafari){
+			supported = false;
+		}
+	}else if(bowser.name=="Chrome"){
+		if(bowser.version<minimumChrome){
+			supported = false;
+		}
+	}else{
+		if(!$.cookie('supportedBrowser')){
+			cookiesSupportBrowser = false;
+			supported = false;
+		}
+	}
+	
+	if(supported){
+		$("#notSupportedBrowser").hide();
+	}else{
+		$('#notSupportedBrowser').show();
+		$('#browserNameVerion').text("Váš prohlížeč se identifikuje jako: "+bowser.name+" - "+bowser.version);
+	}
+	if(cookiesSupportBrowser){
+		$("#notCookies").hide();
+	}else{
+		$('#notCookies').show();
+	}
+	
+	if($.cookie('supportedBrowser')){
+		$("#notSupportedBrowser").hide();
+	}
+	
+	function closeInfo(){
+		$("#notSupportedBrowser").hide();
+		$.cookie("supportedBrowser",true);
+	}   
+</script>
+
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="10"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tbody><tr>
+						<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="10" height="0"></td>
+						<td width="100%">
+							<table cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tbody><tr>
+									<td class="textTitle" id="ocekavajiciAkci">Moje závěrečné práce&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+
+								
+								
+								<tr>
+									<td>
+										<table cellspacing="0" cellpadding="0" border="0">
+											<tbody><tr>
+												<td class="boldText">Jméno učitele :&nbsp;</td>
+												<td class="text">Černý Tomáš</td>
+												<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="50" height="1"></td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+								<tr>
+									<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+								<form name="vskpProfesor" method="post" action="https://kos.cvut.cz/kos/vskpProfesor.do"></form>
+									<input type="hidden" name="action" value="VskpCVUTAction(Profesor)_changeTypPrace">
+									<input type="hidden" name="vskpId" value="0">
+
+									<tr>
+										<td>
+											<table cellspacing="0" cellpadding="0" border="0">
+												
+												<tbody><tr>
+													<td class="text"><input type="checkbox" name="selAktivniStudia" value="on" onclick="setAktivniStudia();"></td>
+													<td class="text">&nbsp;zobrazit pouze rozestudovaná studia (včetně přerušených)&nbsp;
+													</td>
+													<td>
+														 &nbsp;<img title="zobrazit pouze rozestudovaná studia" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/context_help.gif">
+														
+													</td>
+												</tr>
+												<tr>
+													<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="15"></td>
+												</tr>
+												
+												<tr>
+
+													<td class="boldText">Role: &nbsp;</td>
+													<td class="text"><select name="selRola" onchange="setRola();"><option value="-">-</option>
+<option value="V" selected="">vedoucí</option>
+<option value="O">oponent</option>
+<option value="AS">vskp.role.asistent</option>
+<option value="KO">vskp.role.konzultant</option></select></td>
+													<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="30" height="1"></td>
+													<td class="boldText">Typ studia :&nbsp;</td>
+													<td class="text"><select name="selTypPrace" onchange="setTypPrace();"><option value="-">-</option>
+<option value="B" selected="">Bakalářská</option>
+<option value="D">Doktorandská</option>
+<option value="M">Magisterská</option>
+<option value="N">Navazujíci (magisterská)</option></select></td>
+													
+													<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="30" height="1"></td>
+													<td class="boldText">Stav práce:&nbsp;</td>
+													<td class="text"><select name="selStavPrace" onchange="setStavPrace();"><option value="" selected="">-</option>
+<option value="NULL">zadána</option>
+<option value="A">odevzdána</option>
+<option value="S">akceptována</option>
+<option value="P">všechny posudky vloženy</option>
+<option value="D">doporučeno k obhajobě</option>
+<option value="Z">nedoporučeno k obhajobě</option>
+<option value="O">obhájena</option>
+<option value="F">neobhájena</option></select></td>
+													
+												</tr>
+												
+											</tbody></table>
+										</td>
+									</tr>
+									
+									<tr>
+										<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="10"></td>
+									</tr>
+									
+									<tr>
+										<td>
+											<table cellspacing="0" cellpadding="0" border="0" width="100%">
+												
+												<tbody><tr class="tableHeader">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left" title="-">Jméno studenta</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left" title="-">Název práce&nbsp;&nbsp;</td>
+													<td nowrap="nowrap" title="Typ studia">&nbsp;&nbsp;Typ studia&nbsp;&nbsp;
+													</td>
+													<td title="Stav práce">&nbsp;&nbsp;Stav&nbsp;&nbsp;
+													</td>
+													<td title="-">&nbsp;&nbsp;Role&nbsp;&nbsp;
+													</td>
+													<td nowrap="nowrap" title="Datum, do kdy má student závěrečnou práci odevzdat.">&nbsp;&nbsp;Termín odevzdání&nbsp;&nbsp;
+													</td>
+													<td nowrap="nowrap" title="Skutečné datum odevzdání závěrečné práce.">&nbsp;&nbsp;Datum odevzdání&nbsp;&nbsp;
+													</td>
+													<td title="Akce">&nbsp;&nbsp;Akce&nbsp;&nbsp;
+													</td>
+													<td title="Akce">&nbsp;&nbsp;Akce&nbsp;&nbsp;
+													</td>
+													<td title="Akce">&nbsp;&nbsp;Akce&nbsp;&nbsp;
+													</td>
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Ashhab&nbsp;Naim&nbsp;(406402)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Mobilní aplikace Trampingo</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2016&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2016&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587865376305&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587865376305&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Brabec&nbsp;Zdeněk&nbsp;(393141)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Porovnání frontendového vývoje webových aplikací s použitím AngularJS 2 a ReactJS s integrací AspectFaces</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2016&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;22.05.2016&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587865132905&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587865132905&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Cubas Lopez&nbsp;Jenefer Elizabeth&nbsp;(347797)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Informační systém pro prodej bytů a domů</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;28.05.2010&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;204067182905&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;204067182905&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Filkina&nbsp;Evgenia&nbsp;(373381)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Elektronická podpora pro kolektivní překlad textu</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;337777010605&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;337777010605&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Fišera&nbsp;Marek&nbsp;(355822)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Správa vzdáleného souborového systému přes webový prohlížeč</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;222609563705&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;222609563705&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Gorbunov&nbsp;Vladyslav&nbsp;(434997)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Kontextová iOS aplikace pro MyICPC se sběrem contextu v IoT prostředí</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2018&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2018&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;881196312405&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;881196312405&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Hašlarová&nbsp;Kateřina&nbsp;(371911)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Sociální síť FELBoard</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;339630695805&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;339630695805&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Helbich&nbsp;Jan&nbsp;(393281)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Univerzální knihovna pro validaci vstupních dat na klientské části webových aplikací</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;23.05.2014&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;531593636805&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;531593636805&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Hoťková&nbsp;Marie&nbsp;(372749)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Aplikace pro podporu administrativy středních a základních škol</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;03.01.2014&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;450484441705&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;450484441705&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Chalupa&nbsp;Václav&nbsp;(363860)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Nová generace nástroje FormBuilder</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;270833749605&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;270833749605&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Janouch&nbsp;Petr&nbsp;(363762)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Zabezpečení a správa znalostí pro JSF Wiki knihovnu</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;275189876205&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;275189876205&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Jaroměřská&nbsp;Slávka&nbsp;(363863)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Prostředí pro simulace peer-to-peer aplikací s aplikací pro Cooperative Web Cache</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;266087162505&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;266087162505&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Jíra&nbsp;Pavel&nbsp;(350080)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Webové služby media galerie mezinárodní soutěže v programování</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;28.05.2010&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;192234470105&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;192234470105&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Kostělej&nbsp;Valentin&nbsp;(354955)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Moderní webové rozhraní pro Chip DVD - počítačový magazín</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;28.05.2010&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;188043464505&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;188043464505&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Kostolný&nbsp;Martin&nbsp;(356039)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Media galerie mezinárodní soutěže v programování</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;28.05.2010&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;194697737105&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;194697737105&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Koukal&nbsp;Vojtěch&nbsp;(372041)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Webový systém pro správu bodů zájmu</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;346997811905&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;346997811905&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Mátl&nbsp;Luboš&nbsp;(363837)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Systém pro distribuci statických zdrojů urychlující načítání webových aplikací</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;266087277205&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;266087277205&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Minařík&nbsp;Jan&nbsp;(372248)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Webový systém pro podporu sociálních aktivit</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;346997819405&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;346997819405&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Mirtes&nbsp;Ondřej&nbsp;(363528)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Rozšíření webového prohlížeče pro označování lidí na libovolných fotografiích na Internetu</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;265522205505&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;265522205505&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Musil&nbsp;Ondřej&nbsp;(420342)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Realtime prezentace soutěžních výsledků a tweetů v systému MyICPC</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;09.01.2018&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;22.09.2017&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587864690905&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864690905&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Paulík&nbsp;Adam&nbsp;(420408)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Vývoj IoT aplikačního běhového prostředí</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;26.05.2017&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;26.05.2017&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587864663805&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864663805&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Praus&nbsp;Petr&nbsp;(363542)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Framework pro nastavení síťových prostředků umožňující simulaci různých podmínek sítě</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;266087157905&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;266087157905&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Procházka&nbsp;Kamil&nbsp;(372558)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Tlustý klient a webové služby pro systém správy projektu</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;347235426805&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;347235426805&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Rychtecký&nbsp;Lukáš&nbsp;(355641)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Rozšíření knihovny pro JSFWiki knihovny o technologii AJAX</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;270833758805&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;270833758805&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Ryšavý&nbsp;Filip&nbsp;(420410)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Integrace knihovny AspectFaces do frameworku Angular 2</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2016&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2016&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587864677505&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864677505&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Řežábek&nbsp;Michal&nbsp;(399284)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Nástroje pro automatizaci tvorby uživatelského rozhraní</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;23.05.2014&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;531593579305&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;531593579305&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Sedliský&nbsp;Filip&nbsp;(411741)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Flexibilní modularizace zdrojového kódu</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2018&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;23.05.2018&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;695599566205&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;695599566205&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Skala&nbsp;Jaroslav&nbsp;(420402)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Aukční systém pomocí Angular 2 a AspectFaces</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;zadána&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+															
+															<a href="javascript:documentTiskZadaniPDF(7745706);" title="button.dokument.zadani.title">Tisk zadání
+															</a>
+														
+													</td>
+													
+													<td>&nbsp;&nbsp;</td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864608605&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Skoumal&nbsp;Ondřej&nbsp;(368933)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Objevování bezpečnostních chyb ve zdrojovém kódu za použití dotazů v grafových databázích</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;26.05.2017&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;26.05.2017&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587864542205&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864542205&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Smetana&nbsp;Roman&nbsp;(372030)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Nová generace architektur pro webové systémy</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;339388483505&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;339388483505&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Suchanová&nbsp;Barbora&nbsp;(420309)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Mobilní aplikace Kalorické Tabulky se synchronizací se sport trackery a integrací antropometrických údajů</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;27.05.2016&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;23.05.2016&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;587864623805&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864623805&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Szépe&nbsp;Matúš&nbsp;(371954)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Turistický webový portál nové generace</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;346997797705&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;346997797705&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Tomášek&nbsp;Martin&nbsp;(372445)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Informační systém pro podporu automatizace výuky</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;352987067405&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;352987067405&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Trnka&nbsp;Michal&nbsp;(372925)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Zabezpěčení web aplikací na platformě Java Enterprise Edition</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;25.05.2012&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;342018431605&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;342018431605&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow2">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Vítek&nbsp;Josef&nbsp;(347257)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Rozšíření systému pro správu chyb BugTrack o evidenci testů</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;obhájena&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;29.08.2011&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+														
+															&nbsp;			
+														
+													</td>
+													
+													<td nowrap="nowrap"><a href="javascript:posudokVSKP(&#39;194894254105&#39;);">
+															 &nbsp;&nbsp;Posudek&nbsp;&nbsp;
+													</a></td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;194894254105&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												<tr class="tableRow1">
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Vrábeľ&nbsp;Martin&nbsp;(420422)</td>
+													<td>&nbsp;&nbsp;</td>
+													<td align="left">Vytvoření základu moderního datového skladu pro technologický startup</td>
+													<td>&nbsp;&nbsp;B&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;zadána&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;vedoucí&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													<td>&nbsp;&nbsp;&nbsp;&nbsp;
+													</td>
+													
+													<td>
+															
+															<a href="javascript:documentTiskZadaniPDF(7767006);" title="button.dokument.zadani.title">Tisk zadání
+															</a>
+														
+													</td>
+													
+													<td>&nbsp;&nbsp;</td>
+													
+													
+													<td nowrap="nowrap"><a href="javascript:detailVSKP(&#39;587864542305&#39;);">
+															 &nbsp;&nbsp;Detail&nbsp;&nbsp;
+													</a></td>
+													
+
+												</tr>
+												
+												
+											</tbody></table>  
+										</td>
+									</tr>
+								
+								<tr>
+									<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+
+							</tbody></table>
+						</td>
+						<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="10" height="0"></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+
+
+
+
+
+
+
+<tr>
+	<td width="100%">
+		<!-- paticka -->
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td colspan="99"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/1pix_blue.gif" width="100%" height="2"></td>
+			</tr>
+			<tr>
+				<td><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="1" height="10"></td>
+			</tr>
+			<tr> 
+				<td colspan="99">
+					<table width="100%" cellpadding="0" cellspacing="0">
+						<tbody><tr> 
+							<td nowrap="nowrap" width="33%" align="left" class="text"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="10" height="1">
+Provozovatel: Výpočetní a informační centrum
+							</td>
+							<td nowrap="nowrap" width="34%" align="center" class="text"></td>
+							<td nowrap="nowrap" width="33%" align="right" class="text">
+								<img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="20" height="1">
+								<a href="javascript:okno(&#39;https%3A%2F%2Fhelpdesk.cvut.cz%2Fjira%2Fsecure%2FCreateIssueDetails%21init.jspa%3Fpid%3D13461%26issuetype%3D6%26customfield_11400%3D10500%26components%3D13606&#39;)">
+									<i>
+HelpDesk ČVUT
+									</i>
+								</a>
+								<img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="20" height="1">
+								<a href="javascript:okno(&#39;helpCVUTcs/profesor/vskpProfesor.html&#39;)">
+									<i>Nápověda</i>
+								</a>
+								<img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="20" height="1">
+								<a class="logout" href="https://kos.cvut.cz/kos/logout.do?LogoutAction_logoutClick=CERNYTO3">
+									<i>Odhlášení  SSO</i>
+								</a>
+								<img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="10" height="1">
+							</td>
+						</tr>
+						<tr height="100%" valign="bottom"> 
+							<td nowrap="nowrap" width="33%" align="left" class="text"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="10" height="30"></td>
+							<td nowrap="nowrap" width="34%" align="center" class="text"></td>
+							<td nowrap="nowrap" width="33%" align="right" class="text"><img src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/spacer.gif" width="10" height="30"></td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+	</td>
+</tr>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6923369-8', 'auto');
+  ga('send', 'pageview');
+</script> 
+
+
+
+
+
+
+
+
+
+	</tbody></table>
+	<div id="wait" style="position:absolute; left:-200; top:-100; z-index:200; visibility:visible">
+  <table border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+
+            <td><img border="0" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/wait00.gif" width="197" height="40"><br><img border="0" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/wait02.gif" width="197" height="16"></td>
+
+			<td><img border="0" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/tienh.gif"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><img border="0" src="./STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)_files/tiend.gif"></td>
+          </tr>
+        </tbody></table>
+</div>
+
+
+<style></style></body></html>

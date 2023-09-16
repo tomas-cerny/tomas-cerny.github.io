@@ -1,0 +1,162 @@
+/* CSS Document */
+
+/*PAGE LAYOUT*/
+body {
+	background-image: url(images/bg_body.jpg);
+	background-repeat: repeat-x;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+#toppage{
+	width:800px;
+}
+#date{
+	float:left; width:190px; height:39px; border-bottom:solid 1px #999999; border-right:solid 1px #999999;
+}
+#topbar{
+	float:left; 
+	width:608px; 
+	height:40px; 
+	background-image:url('./img/tabClosedKhaki.png');
+	background-color:#CBC5FC;
+	background-repeat:repeat-x;
+	border-right:solid 1px #999999;
+}
+#header{
+	width:800px;
+}
+#content{
+	width:800px;
+}
+#contenttext{
+	float:left; width:608px; 
+	background-color:#F7F7F7; 
+	border-left:solid 1px #999999; border-right:solid 1px #999999; 
+	border-bottom:solid 1px #999999; border-top:dotted 1px #CCCCCC; 
+	min-height:360px;
+}
+#logo{
+	float:left; width:190px; height:110px; background-color:#F7F7F7; border-left:solid 1px #999999;
+}
+#pagetitle{
+	position:relative; float:left; width:608px; height:110px; background-color:#F7F7F7; border-right:solid 1px #999999;
+}
+#title{
+	position:absolute; right:10px; bottom:0px; width:600px;
+}
+div#menu{
+	float:left; width:190px; margin:0px;
+}
+#footer{
+	width:590px; padding-right:10px; padding-left:200px;
+}
+
+/*GRAY PANEL*/
+.panel{
+	padding:12px;
+	border:solid 1px #E4E4E4;
+	background-color:#EEEEEE;
+	margin:10px;
+	padding:10px;
+	width:550px;
+	height:160px;
+}
+
+/*TEXT STYLES*/
+.bodytext {
+	font: 0.7em Tahoma, sans-serif;
+	color: #666666;
+}
+div.smalltext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 1.1em;
+	color: #666666;
+}
+
+.smallwhitetext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #FFFFFF;
+}
+.smallwhitetext a{
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+.smallwhitetext a:hover{
+	text-decoration:underline;
+}
+div.smallgraytext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	color:#AAA;
+}
+div.smallgraytext a{
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	color:#AAA;
+	text-decoration:none;
+}
+div.smallgraytext a:hover{
+	text-decoration:underline;
+}
+div.titletext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color: #CCCCCC;
+}
+div.logotext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color: #999999;
+}
+span.orangelogotext {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color:#FF9900;
+}
+span.orangetitle {
+	font: 0.7em Tahoma, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+	color:#FF9900;
+}
+div#linksmenu a{
+	float:right; 
+	width:123px; 
+	height:20px; 
+	background-color:#8BA5F8; 
+	text-align: left;
+	display: block
+	border-left:solid 1px #FFFFFF; 
+	border-bottom:solid 1px #FFFFFF;
+	font: 0.7em Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #FFFFFF;
+	text-decoration:none;
+	padding: 5px 0 0 5em;
+}
+div#linksmenu a:hover{ 
+	background-color:#514FFC;
+}
+div#linksmenu a.subject {
+   background-color:#BBD5F8;
+   width:110px;  
+   padding: 5px 0 0 6em;
+}
+div#linksmenu a.subject:hover{ 
+	background-color:#7B95F8;
+}
+
+div#footer {
+	text-align: right;
+}

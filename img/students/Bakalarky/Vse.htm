@@ -1,0 +1,1079 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0074)https://kos.cvut.cz/kos/tzpProfesor.do?page=a77fff5cb614bb72ea4efbb326377c -->
+<html lang="en" class="gr__kos_cvut_cz"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="content-language" content="cz">
+<meta name="GENERATOR" content="IBM WebSphere Studio">
+<title>STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)</title>
+	<link rel="stylesheet" type="text/css" href="./Vse_files/pages.css">
+
+
+	<link rel="stylesheet" type="text/css" href="./Vse_files/page_cvut.css">
+	<link rel="stylesheet" type="text/css" href="./Vse_files/menu6.css">
+
+	
+	<link type="text/css" rel="stylesheet" href="./Vse_files/jquery-ui.css">
+	<script async="" src="./Vse_files/analytics.js"></script><script type="text/javascript" src="./Vse_files/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="./Vse_files/jquery-ui-1.10.2.js"></script>
+	<link rel="stylesheet" href="./Vse_files/bootstrap.min.css">
+	<script src="./Vse_files/bootstrap.min.js"></script>
+
+	<style>
+		.ui-autocomplete { max-height: 200px; overflow-y: auto; /* prevent horizontal scrollbar */	overflow-x: hidden; 	}
+		
+		/*KOSI osetrenie problemu nechceneho zobrazenia kalendaru na konci stranky*/ #ui-datepicker-div { display: none; }
+		/*KOSI kalendar dni vikendu (hore)*/ .ui-datepicker-week-end {color:#f00; background: #ccddee;}
+		/*KOSI kalendar dni vikendu (dole)*/ .ui-widget-content .ui-state-disabled { opacity: .99; }
+		/*KOSI bacground kalendara*/ .ui-widget-content { border: 2px solid #aaaaaa/*{borderColorContent}*/; background: #ffffff/*{bgColorContent}*/ ; color: #222222/*{fcContent}*/; }
+		/*KOSI headpanel mesiac rok*/ .ui-widget-header { border: 1px solid #aaaaaa/*{borderColorHeader}*/; background: #bbccdd/*{bgColorHeader}*/ ; color: #222222/*{fcHeader}*/; font-weight: bold; }
+		/*KOSI zobrazene dni*/ .ui-widget-content .ui-state-default { border: 1px solid #d3d3d3/*{borderColorDefault}*/; background: #ddeeff/*{bgColorDefault}*/; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcDefault}*/; }
+		/*KOSI den pod myskou*/ .ui-widget-content .ui-state-hover, .ui-widget-content .ui-state-focus { border: 1px solid #999999/*{borderColorHover}*/; background: #bbccdd/*{bgColorHover}*/ ; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcHover}*/; }
+		/*KOSI aktualny zvyrazneny den*/ .ui-widget-content .ui-state-highlight {border: 1px solid #333333/*{borderColorHighlight}*/; background: #ffe1ff/*{bgColorHighlight}*/ ; color: #363636/*{fcHighlight}*/; }
+		/*KOSI zvoleny zvyrazneny den*/ .ui-widget-content .ui-state-active { border: 1px solid #aaaaaa/*{borderColorActive}*/; background: #ffffff/*{bgColorActive}*/ url(images/ui-bg_glass_65_ffffff_1x400.png)/*{bgImgUrlActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcActive}*/; }
+		
+	</style>
+
+
+
+	<script language="JavaScript" src="./Vse_files/formulartools.js"></script>
+
+
+
+<script language="JavaScript" src="./Vse_files/browser.js"></script>
+<script language="JavaScript" src="./Vse_files/linker.js"></script>
+<script language="JavaScript" src="./Vse_files/menu.js"></script>
+<script language="JavaScript" src="./Vse_files/help.js"></script>
+<script language="JavaScript" src="./Vse_files/wait.js"></script>
+
+<script language="JavaScript" src="./Vse_files/bootstrap_table.js"></script>
+<link rel="stylesheet" href="./Vse_files/bootstrap_table.css">
+<link rel="stylesheet" href="./Vse_files/bootstrap.min(1).css">
+<link rel="stylesheet" href="./Vse_files/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="./Vse_files/buttons.bootstrap.min.css">
+<script language="JavaScript" src="./Vse_files/jquery-1.12.3.js"></script>
+<script language="JavaScript" src="./Vse_files/jquery.dataTables.min.js"></script>
+<script language="JavaScript" src="./Vse_files/dataTables.bootstrap.min.js"></script>
+<script language="JavaScript" src="./Vse_files/dataTables.colReorder.min.js"></script>
+<script language="JavaScript" src="./Vse_files/dataTables.buttons.min.js"></script>
+<script language="JavaScript" src="./Vse_files/buttons.bootstrap.min.js"></script>
+<script language="JavaScript" src="./Vse_files/jszip.min.js"></script>
+<script language="JavaScript" src="./Vse_files/pdfmake.min.js"></script>
+<script language="JavaScript" src="./Vse_files/vfs_fonts.js"></script>
+<script language="JavaScript" src="./Vse_files/buttons.html5.min.js"></script>
+<script language="JavaScript" src="./Vse_files/buttons.print.min.js"></script>
+<script language="JavaScript" src="./Vse_files/buttons.colVis.min.js"></script>
+
+
+<style>
+.btn{
+	padding: 0px 6px;
+	margin-bottom: 5px;
+	margin-right: 3px;
+	background-color: 
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding: 2px 1px;
+    font-size: 0.8em;
+}
+
+.table > thead > tr > td, .table > thead > tr > th{
+	padding: 2px;
+	font-size: 0.8em;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > td > a{
+	padding: 2px;
+}
+
+.pagination > li > a, .pagination > li > span{
+	padding: 2px 5px;
+}
+
+select.input-sm {
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 0px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #c1c1c1;
+}
+
+
+table.dataTable thead .sorting::after{
+	content: "";
+}
+
+table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after, table.dataTable thead .sorting_desc::after, table.dataTable thead .sorting_asc_disabled::after, table.dataTable thead .sorting_desc_disabled::after {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+    font-family: 'Glyphicons Halflings';
+    opacity: 0.5;
+    content: "";
+}
+
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting {
+    padding-right: 0px;
+}
+
+
+
+</style>
+<script>
+
+	var filterRtzp = ["","","","","","","","","",""];
+
+	
+	function viewTzp( value ) {
+		var json_str = JSON.stringify(filterRtzp);
+	  $.cookie('tzpFilter', json_str); 
+		showWait();
+		document.tzpProfesor.action.value = "RtzpAction_view";
+		document.tzpProfesor.id.value = value;
+		if (document.forms['tzpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['tzpProfesor'].attributes["action"].nodeValue = document.forms['tzpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.tzpProfesor.submit();
+	}
+
+	function editTzp( value )
+	{
+		var json_str = JSON.stringify(filterRtzp);
+	  $.cookie('tzpFilter', json_str); 
+		showWait();
+		document.tzpProfesor.action.value = "RtzpAction_edit";
+		document.tzpProfesor.id.value = value;
+		if (document.forms['tzpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['tzpProfesor'].attributes["action"].nodeValue = document.forms['tzpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.tzpProfesor.submit();
+	}
+	
+	function removeTzp( value )
+	{
+		var json_str = JSON.stringify(filterRtzp);
+		$.cookie('tzpFilter', json_str);
+		showWait();
+		document.tzpProfesor.action.value = "RtzpAction_delete";
+		document.tzpProfesor.id.value = value;
+		if (document.forms['tzpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['tzpProfesor'].attributes["action"].nodeValue = document.forms['tzpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.tzpProfesor.submit();
+	}
+	
+	function agreeTzp( value )
+	{
+		var json_str = JSON.stringify(filterRtzp);
+		$.cookie('tzpFilter', json_str);
+		showWait();
+		document.tzpProfesor.action.value = "RtzpAction_agree";
+		document.tzpProfesor.id.value = value;
+		if (document.forms['tzpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['tzpProfesor'].attributes["action"].nodeValue = document.forms['tzpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.tzpProfesor.submit();
+	}
+	
+	function disAgreeTzp( value )
+	{
+		var json_str = JSON.stringify(filterRtzp);
+		$.cookie('tzpFilter', json_str);
+		showWait();
+		document.tzpProfesor.action.value = "RtzpAction_disagree";
+		document.tzpProfesor.id.value = value;
+		if (document.forms['tzpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['tzpProfesor'].attributes["action"].nodeValue = document.forms['tzpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.tzpProfesor.submit();
+	}
+	
+	function newTzp()
+	{
+		showWait();
+		document.tzpProfesor.action.value = "RtzpAction_new";
+		if (document.forms['tzpProfesor'].attributes["action"].nodeValue.indexOf("?") < 0)
+		{
+			document.forms['tzpProfesor'].attributes["action"].nodeValue = document.forms['tzpProfesor'].attributes["action"].nodeValue + "?page="+pageCode;
+		}
+		document.tzpProfesor.submit();
+	}
+
+	function viewTzpFakulty(table) {
+		
+    	showWait();
+    	var addres = '';
+    	if(document.getElementById('allFakulta').checked){
+    		addres = '/kos/rest/rtzp/tzpForProfesor/1';
+    		document.tzpProfesor.zobrazitTCelaFakulta.value = "on";
+    		// alert("checked ...");
+    	}else{
+    		addres = '/kos/rest/rtzp/tzpForProfesor/2';
+    		document.tzpProfesor.zobrazitTCelaFakulta.value = "";
+    	}
+		jQuery.ajax({
+	        url : addres,
+	        type: 'GET',
+	        dataType : 'json',
+	        error : function(XHR, textStatus, errorThrown) {
+	        	alert("error: " + textStatus);
+	          alert("error: " + errorThrown);
+	        },
+	        success : function(data) {
+	        	dataSet = data;
+	        	table.clear();
+	        	table.rows.add(data);
+	        	if(document.getElementById('allFakulta').checked){
+	        		table.column(3).visible(true);
+	        	}else{
+	        		table.column(3).visible(false);
+	        	}
+	        	table.draw();
+	        	hideWait();
+	       	}
+		   });
+
+	}	
+	
+	function onPageLoad()
+	{
+		menu.joinMenu(-1);
+		StartClock();
+		
+	}
+	
+		
+			var pageCode='a77fff5cb614bb72ea4efbb326377c';
+		
+			var appName = '/kos';
+			
+			var dataSet = [{"tema":"Automatizace generov\u00E1n\u00ED u\u017Eivatelsk\u00E9ho rozhran\u00ED pro aplikaci eForm","kdyzap":"14.11.2012","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T037","obor_nazev":"Počítačové inženýrství","student_jmeno":"Zdeněk Dušátko(dusatzde@fel.cvut.cz, os. č.: 364729)","id":"428568551905","stav_prace":"Z","student_id":"5532806","PLATNOST_DO":""} ,{"tema":"Kontextov\u00E1 iOS aplikace pro MyICPC se sb\u011Brem contextu v IoT prost\u0159ed\u00ED","kdyzap":"13.12.2017","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Vladyslav Gorbunov(gorbuvla@seznam.cz, os. č.: 434997)","id":"905424222905","stav_prace":"Z","student_id":"14746306","PLATNOST_DO":""} ,{"tema":"V\u00FDvojov\u00E9 prost\u0159ed\u00ED budoucnosti aneb integrace CASE n\u00E1stroje do v\u00FDvojov\u00E9ho prost\u0159ed\u00ED","kdyzap":"08.10.2009","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Ota Švimberský(svimbota@fel.cvut.cz, os. č.: 330411)","id":"181542838205","stav_prace":"Z","student_id":"17016604","PLATNOST_DO":""} ,{"tema":"Modern\u00ED webov\u00E9 rozhran\u00ED pro Chip DVD - po\u010D\u00EDta\u010Dov\u00FD magaz\u00EDn","kdyzap":"08.12.2009","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"2612R051","obor_nazev":"Výpočetní technika","student_jmeno":"Valentin Kostělej(kosteval@fel.cvut.cz, os. č.: 354955)","id":"184335214705","stav_prace":"Z","student_id":"15641904","PLATNOST_DO":""} ,{"tema":"Roz\u0161\u00ED\u0159en\u00ED syst\u00E9mu pro spr\u00E1vu chyb BugTrack o evidenci test\u016F","kdyzap":"14.03.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Josef Vítek(vitekjos@fel.cvut.cz, os. č.: 347257)","id":"194894254005","stav_prace":"Z","student_id":"15152104","PLATNOST_DO":""} ,{"tema":"Wiki knihovna pro Java Enterprise Edition aplikace","kdyzap":"22.12.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Petr Dytrych(dytrypet@fel.cvut.cz, os. č.: 339187)","id":"182759769005","stav_prace":"Z","student_id":"16973504","PLATNOST_DO":""} ,{"tema":"Syst\u00E9m pro spr\u00E1vu hotelov\u00E9 agendy","kdyzap":"08.12.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Róbert Varga(vargarob@fel.cvut.cz, os. č.: 339583)","id":"191854314405","stav_prace":"Z","student_id":"17019404","PLATNOST_DO":""} ,{"tema":"Webov\u00E9 slu\u017Eby media galerie mezin\u00E1rodn\u00ED sout\u011B\u017Ee v programov\u00E1n\u00ED","kdyzap":"01.03.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Pavel Jíra(jirapave@fit.cvut.cz, os. č.: 350080)","id":"192234470005","stav_prace":"Z","student_id":"15744604","PLATNOST_DO":""} ,{"tema":"Media galerie mezin\u00E1rodn\u00ED sout\u011B\u017Ee v programov\u00E1n\u00ED","kdyzap":"12.01.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Martin Kostolný(kostomar@fit.cvut.cz, os. č.: 356039)","id":"194697737005","stav_prace":"Z","student_id":"15743804","PLATNOST_DO":""} ,{"tema":"Univerz\u00E1ln\u00ED knihovna pro validaci vstupn\u00EDch dat na klientsk\u00E9 \u010D\u00E1sti webov\u00FDch aplikac\u00ED","kdyzap":"07.01.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Jan Helbich(helbijan@fel.cvut.cz, os. č.: 393281)","id":"531593636705","stav_prace":"Z","student_id":"4706306","PLATNOST_DO":""} ,{"tema":"N\u00E1stroje pro automatizaci tvorby u\u017Eivatelsk\u00E9ho rozhran\u00ED","kdyzap":"22.01.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Michal Řežábek(rezabmic@fel.cvut.cz, os. č.: 399284)","id":"531593579205","stav_prace":"Z","student_id":"5830306","PLATNOST_DO":""} ,{"tema":"Webov\u00E1 platforma umo\u017E\u0148uj\u00EDc\u00ED chovatel\u016Fm nab\u00EDzet sv\u016Fj odchov","kdyzap":"07.01.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Marek Polcar(polcama1@fel.cvut.cz, os. č.: 354995)","id":"528514333905","stav_prace":"Z","student_id":"5478006","PLATNOST_DO":""} ,{"tema":"Aspektov\u011B orientovan\u00FD v\u00FDvoj u\u017Eivatelsk\u00FDch rozhran\u00ED pro Android aplikace","kdyzap":"07.01.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Jiří Šebek(sebekji1@fel.cvut.cz, os. č.: 372052)","id":"531591173605","stav_prace":"Z","student_id":"6487906","PLATNOST_DO":""} ,{"tema":"Spr\u00E1va vzd\u00E1len\u00E9ho souborov\u00E9ho syst\u00E9mu p\u0159es webov\u00FD prohl\u00ED\u017Ee\u010D","kdyzap":"21.05.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Marek Fišera(fiserma5@fel.cvut.cz, os. č.: 355822)","id":"222609563605","stav_prace":"Z","student_id":"15718204","PLATNOST_DO":""} ,{"tema":"Informa\u010Dn\u00ED syst\u00E9m pro prodej byt\u016F a dom\u016F","kdyzap":"22.02.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"2612R051","obor_nazev":"Výpočetní technika","student_jmeno":"Jenefer Elizabeth Cubas Lopez(cubasjen@fel.cvut.cz, os. č.: 347797)","id":"204067182805","stav_prace":"Z","student_id":"15210704","PLATNOST_DO":""} ,{"tema":"Roz\u0161\u00ED\u0159en\u00ED webov\u00E9ho prohl\u00ED\u017Ee\u010De pro ozna\u010Dov\u00E1n\u00ED lid\u00ED na libovoln\u00FDch fotografi\u00EDch na Internetu","kdyzap":"10.12.2010","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Ondřej Mirtes(mirteond@fit.cvut.cz, os. č.: 363528)","id":"265522205405","stav_prace":"Z","student_id":"16161404","PLATNOST_DO":""} ,{"tema":"Syst\u00E9m pro distribuci statick\u00FDch zdroj\u016F urychluj\u00EDc\u00ED na\u010D\u00EDt\u00E1n\u00ED webov\u00FDch aplikac\u00ED","kdyzap":"13.01.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Luboš Mátl(matllubo@fel.cvut.cz, os. č.: 363837)","id":"266087277105","stav_prace":"Z","student_id":"16184704","PLATNOST_DO":""} ,{"tema":"Framework pro nastaven\u00ED s\u00ED\u0165ov\u00FDch prost\u0159edk\u016F umo\u017E\u0148uj\u00EDc\u00ED simulaci r\u016Fzn\u00FDch podm\u00EDnek s\u00EDt\u011B","kdyzap":"25.02.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Petr Praus(prauspet@fel.cvut.cz, os. č.: 363542)","id":"266087157805","stav_prace":"Z","student_id":"16162804","PLATNOST_DO":""} ,{"tema":"Prost\u0159ed\u00ED pro simulace peer-to-peer aplikac\u00ED s aplikac\u00ED pro Cooperative Web Cache","kdyzap":"13.01.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Slávka Jaroměřská(jaromsla@fel.cvut.cz, os. č.: 363863)","id":"266087162405","stav_prace":"Z","student_id":"16187504","PLATNOST_DO":""} ,{"tema":"Mobiln\u00ED aplikace Trampingo","kdyzap":"14.01.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Naim Ashhab(ashhanai@fel.cvut.cz, os. č.: 406402)","id":"623631852605","stav_prace":"Z","student_id":"6215006","PLATNOST_DO":""} ,{"tema":"Zabezpe\u010Den\u00ED v P2P s\u00EDt\u00EDch kryptografick\u00FDch m\u011Bn","kdyzap":"12.06.2014","stav":"zadané","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Dmytro Gogulinskyy(goguldmy@fel.cvut.cz, os. č.: 358319)","id":"569093863705","stav_prace":"Z","student_id":"7135506","PLATNOST_DO":""} ,{"tema":"Zabezpe\u010Den\u00ED automaticky generovan\u00FDch REST slu\u017Eeb","kdyzap":"12.10.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Martin Egermajer(egermma1@fel.cvut.cz, os. č.: 372691)","id":"568841758605","stav_prace":"Z","student_id":"6490906","PLATNOST_DO":""} ,{"tema":"Webov\u00FD framework pro prezentaci dat na klientsk\u00E9 stran\u011B","kdyzap":"12.10.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Kamil Procházka(prochazka.kamil@gmail.com, os. č.: 372558)","id":"610506983105","stav_prace":"Z","student_id":"8040206","PLATNOST_DO":""} ,{"tema":"Aplikace frameworku zabezpe\u010Den\u00ED do syst\u00E9mu pro spr\u00E1vu chyb BugTrack","kdyzap":"15.02.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Ljubomir Mirkovski(mirkolju@fel.cvut.cz, os. č.: 370183)","id":"275189904605","stav_prace":"Z","student_id":"1412306","PLATNOST_DO":""} ,{"tema":"E-learningov\u00FD syst\u00E9m pro st\u0159edn\u00ED \u0161koly","kdyzap":"05.09.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Michal Bukovský(bukovmi4@fel.cvut.cz, os. č.: 330042)","id":"307047936105","stav_prace":"Z","student_id":"16968904","PLATNOST_DO":""} ,{"tema":"Roz\u0161\u00ED\u0159en\u00ED knihovny pro JSFWiki knihovny o technologii AJAX","kdyzap":"13.01.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Lukáš Rychtecký(rychtluk@fel.cvut.cz, os. č.: 355641)","id":"270833758705","stav_prace":"Z","student_id":"16178204","PLATNOST_DO":""} ,{"tema":"Nov\u00E1 generace n\u00E1stroje FormBuilder","kdyzap":"13.01.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Václav Chalupa(chaluva2@fel.cvut.cz, os. č.: 363860)","id":"270833749505","stav_prace":"Z","student_id":"16187204","PLATNOST_DO":""} ,{"tema":"Zabezpe\u010Den\u00ED a spr\u00E1va znalost\u00ED pro JSF Wiki knihovnu","kdyzap":"08.03.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Petr Janouch(janoupe8@fit.cvut.cz, os. č.: 363762)","id":"275189876105","stav_prace":"Z","student_id":"16175804","PLATNOST_DO":""} ,{"tema":"Elektronick\u00E1 podpora pro kolektivn\u00ED p\u0159eklad textu","kdyzap":"08.11.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Evgenia Filkina(filkievg@fit.cvut.cz, os. č.: 373381)","id":"337777010505","stav_prace":"Z","student_id":"2828706","PLATNOST_DO":""} ,{"tema":"Webov\u00FD syst\u00E9m pro spr\u00E1vu bod\u016F z\u00E1jmu","kdyzap":"19.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Vojtěch Koukal(koukavoj@fel.cvut.cz, os. č.: 372041)","id":"346997811805","stav_prace":"Z","student_id":"1688206","PLATNOST_DO":""} ,{"tema":"Turistick\u00FD webov\u00FD port\u00E1l nov\u00E9 generace","kdyzap":"19.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Matúš Szépe(szepemat@fit.cvut.cz, os. č.: 371954)","id":"346997797605","stav_prace":"Z","student_id":"1701306","PLATNOST_DO":""} ,{"tema":"Webov\u00FD syst\u00E9m pro podporu soci\u00E1ln\u00EDch aktivit","kdyzap":"19.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Jan Minařík(minarja4@fel.cvut.cz, os. č.: 372248)","id":"346997819305","stav_prace":"Z","student_id":"1727006","PLATNOST_DO":""} ,{"tema":"Nov\u00E1 generace architektur pro webov\u00E9 syst\u00E9my","kdyzap":"01.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Roman Smetana(smetarom@fel.cvut.cz, os. č.: 372030)","id":"339388483405","stav_prace":"Z","student_id":"1675806","PLATNOST_DO":""} ,{"tema":"Informa\u010Dn\u00ED syst\u00E9m pro podporu automatizace v\u00FDuky","kdyzap":"08.01.2012","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Martin Tomášek(tomasma5@fel.cvut.cz, os. č.: 372445)","id":"352987067305","stav_prace":"Z","student_id":"1689106","PLATNOST_DO":""} ,{"tema":"Tlust\u00FD klient a webov\u00E9 slu\u017Eby pro syst\u00E9m spr\u00E1vy projektu","kdyzap":"19.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Kamil Procházka(prochka6@fel.cvut.cz, os. č.: 372558)","id":"347235426705","stav_prace":"Z","student_id":"1669306","PLATNOST_DO":""} ,{"tema":"Zabezp\u011B\u010Den\u00ED web aplikac\u00ED na platform\u011B Java Enterprise Edition","kdyzap":"01.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"3902R031","obor_nazev":"Softwarové inženýrství","student_jmeno":"Michal Trnka(trnkami1@fel.cvut.cz, os. č.: 372925)","id":"342018431505","stav_prace":"Z","student_id":"1735806","PLATNOST_DO":""} ,{"tema":"Aspektov\u011B orientovan\u00FD framework pro komunikaci Microservice","kdyzap":"24.05.2018","stav":"volné","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":" (, os. č.: 0)","id":"432879964005","stav_prace":"V","student_id":"0","PLATNOST_DO":""} ,{"tema":"Framework pro testov\u00E1n\u00ED P2P aplikac\u00ED ve v\u011Bdeck\u00E9 po\u010D\u00EDta\u010Dov\u00E9 s\u00EDti PlanetLab","kdyzap":"05.12.2012","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"2612T051","obor_nazev":"Výpočetní technika","student_jmeno":"Viktor Bohuslav Bohdal(viktor.bohdal@muvs.cvut.cz, os. č.: 363674)","id":"434024932305","stav_prace":"Z","student_id":"5476606","PLATNOST_DO":""} ,{"tema":"Syst\u00E9m pro personifikovan\u00FD pohled nad realtime ud\u00E1lostmi sout\u011B\u017E\u00ED, MyICPC","kdyzap":"12.10.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Roman Smetana(smetarom@gmail.com, os. č.: 372030)","id":"630013833205","stav_prace":"Z","student_id":"9046506","PLATNOST_DO":""} ,{"tema":"Energetick\u00FD dopad technologie zobrazen\u00ED webov\u00E9ho u\u017Eivatelsk\u00E9ho rozhran\u00ED na mobiln\u00EDm za\u0159\u00EDzen\u00ED","kdyzap":"26.11.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Jan Helbich(janhelbich@gmail.com, os. č.: 393281)","id":"698886583805","stav_prace":"Z","student_id":"9075506","PLATNOST_DO":""} ,{"tema":"Interaktivn\u00ED personifikovan\u00E9 p\u0159izp\u016Fsoben\u00ED vzhledu pro identity & access management \u0159e\u0161en\u00ED - Keycloak","kdyzap":"09.10.2015","stav":"volné","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":" (, os. č.: 0)","id":"694203150005","stav_prace":"V","student_id":"0","PLATNOST_DO":""} ,{"tema":"Integrace knihovny AspectFaces do frameworku Angular 2","kdyzap":"23.11.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Filip Ryšavý(rysavyfilip@gmail.com, os. č.: 420410)","id":"703191492705","stav_prace":"Z","student_id":"7754606","PLATNOST_DO":""} ,{"tema":"Porovn\u00E1n\u00ED frontendov\u00E9ho v\u00FDvoje webov\u00FDch aplikac\u00ED s pou\u017Eit\u00EDm AngularJS 2 a ReactJS s integrac\u00ED AspectFaces","kdyzap":"18.11.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Zdeněk Brabec(zd.brabec@gmail.com, os. č.: 393141)","id":"702935676005","stav_prace":"Z","student_id":"9145606","PLATNOST_DO":""} ,{"tema":"Mobiln\u00ED aplikace Kalorick\u00E9 Tabulky se synchronizac\u00ED se sport trackery a integrac\u00ED antropometrick\u00FDch \u00FAdaj\u016F","kdyzap":"10.12.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Barbora Suchanová(barasuchanova@centrum.cz, os. č.: 420309)","id":"708305790105","stav_prace":"Z","student_id":"7748506","PLATNOST_DO":""} ,{"tema":"Flexibiln\u00ED modularizace zdrojov\u00E9ho k\u00F3du","kdyzap":"04.10.2017","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Filip Sedliský(f.sedlisky@gmail.com, os. č.: 411741)","id":"886845153805","stav_prace":"Z","student_id":"11514306","PLATNOST_DO":""} ,{"tema":"Vzd\u00E1len\u00E9 u\u017Eivatelsk\u00E9 rozhran\u00ED pro \u0159\u00EDd\u00EDc\u00ED syst\u00E9m experimentu COMPASS v CERN","kdyzap":"18.10.2016","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Antonín Květoň(kvetoant@fjfi.cvut.cz, os. č.: 394859)","id":"791333763405","stav_prace":"Z","student_id":"12249806","PLATNOST_DO":""} ,{"tema":"Vytvo\u0159en\u00ED z\u00E1kladu modern\u00EDho datov\u00E9ho skladu pro technologick\u00FD startup","kdyzap":"04.11.2016","stav":"zadané","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Martin Vrábeľ(koroslak@gmail.com, os. č.: 420422)","id":"795347029905","stav_prace":"Z","student_id":"7767006","PLATNOST_DO":""} ,{"tema":"Objevov\u00E1n\u00ED bezpe\u010Dnostn\u00EDch chyb ve zdrojov\u00E9m k\u00F3du za pou\u017Eit\u00ED dotaz\u016F v grafov\u00FDch datab\u00E1z\u00EDch","kdyzap":"16.01.2017","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Ondřej Skoumal(skoumal.ondra@gmail.com, os. č.: 368933)","id":"814192002905","stav_prace":"Z","student_id":"7737306","PLATNOST_DO":""} ,{"tema":"Auk\u010Dn\u00ED syst\u00E9m pomoc\u00ED Angular 2 a AspectFaces","kdyzap":"16.01.2017","stav":"zadané","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Jaroslav Skala(jaraskala@seznam.cz, os. č.: 420402)","id":"814192026705","stav_prace":"Z","student_id":"7745706","PLATNOST_DO":""} ,{"tema":"Middleware interaktivn\u00ED realtime aplikace MyICPC","kdyzap":"21.05.2018","stav":"rezervované","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Vladyslav Gorbunov(vgorbunov96@gmail.com, os. č.: 434997)","id":"796346673305","stav_prace":"R","student_id":"9151606","PLATNOST_DO":""} ,{"tema":"V\u00FDvoj IoT aplika\u010Dn\u00EDho b\u011Bhov\u00E9ho prost\u0159ed\u00ED","kdyzap":"12.01.2017","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"1801R035","obor_nazev":"Softwarové systémy","student_jmeno":"Adam Paulík(adampaulik@me.com, os. č.: 420408)","id":"813655181205","stav_prace":"Z","student_id":"7752406","PLATNOST_DO":""} ,{"tema":"Mobiln\u00ED aplikace pro MyICPC sesb\u011Brem contextu v IoT prost\u0159ed\u00ED","kdyzap":"16.10.2017","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Filip Ryšavý(rysavyfilip@gmail.com, os. č.: 420410)","id":"889972187505","stav_prace":"Z","student_id":"12937606","PLATNOST_DO":""} ,{"tema":"Aplikace pro podporu administrativy st\u0159edn\u00EDch a z\u00E1kladn\u00EDch \u0161kol","kdyzap":"11.02.2013","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"2612R062","obor_nazev":"Web a multimedia","student_jmeno":"Marie Hoťková(marie.hotkova@muvs.cvut.cz, os. č.: 372749)","id":"450484441605","stav_prace":"Z","student_id":"1698006","PLATNOST_DO":""} ,{"tema":"Framework pro objektov\u011B-rela\u010Dn\u00ED mapov\u00E1n\u00ED v jazyce PHP","kdyzap":"18.02.2013","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Václav Purchart(purchva1@fel.cvut.cz, os. č.: 363784)","id":"450484384905","stav_prace":"Z","student_id":"5245906","PLATNOST_DO":""} ,{"tema":"Vyu\u017Eit\u00ED aspektov\u011B-orientovan\u00E9ho p\u0159\u00EDstupu pro tvorbu adaptivn\u00EDch u\u017Eivatelsk\u00FDch rozhran\u00ED","kdyzap":"25.02.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Tomáš Turek(turekto5@fel.cvut.cz, os. č.: 372672)","id":"531593697105","stav_prace":"Z","student_id":"6522506","PLATNOST_DO":""} ,{"tema":"Framework pro spr\u00E1vu a vyhodnocen\u00ED byznys pravidel s podporou transformace do r\u016Fzn\u00FDch platforem","kdyzap":"19.02.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Ondřej Mirtes(mirteond@fit.cvut.cz, os. č.: 363528)","id":"532062079705","stav_prace":"Z","student_id":"6499606","PLATNOST_DO":""} ,{"tema":"Aspektov\u011B orientovan\u00FD v\u00FDvoj u\u017Eivatelsk\u00FDch rozhran\u00ED pro Java SE aplikace","kdyzap":"19.02.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Martin Tomášek(tomasma5@fel.cvut.cz, os. č.: 372445)","id":"531592274305","stav_prace":"Z","student_id":"6523106","PLATNOST_DO":""} ,{"tema":"Komplexn\u00ED informa\u010Dn\u00ED syst\u00E9m neziskov\u00E9 organizace","kdyzap":"01.12.2014","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Vojtěch Koukal(koukavoj@fel.cvut.cz, os. č.: 372041)","id":"613664771505","stav_prace":"Z","student_id":"6522206","PLATNOST_DO":""} ,{"tema":"Soci\u00E1ln\u00ED s\u00ED\u0165 FELBoard","kdyzap":"09.12.2011","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"B","obor_kod":"2612R062","obor_nazev":"Web a multimedia","student_jmeno":"Kateřina Hašlarová(haslakat@fit.cvut.cz, os. č.: 371911)","id":"339630695705","stav_prace":"Z","student_id":"1631006","PLATNOST_DO":""} ,{"tema":"Integrace p\u0159enosu streamovan\u00E9ho videa do peer to peer s\u00EDt\u011B Elisa","kdyzap":"21.12.2012","stav":"zadané","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Vladimír Klouček(kloucvla@fel.cvut.cz, os. č.: 363824)","id":"432433973005","stav_prace":"Z","student_id":"5231606","PLATNOST_DO":""} ,{"tema":"Framework pro distribuci webov\u00FDch zdroj\u016F","kdyzap":"19.04.2013","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Luboš Mátl(matllubo@fel.cvut.cz, os. č.: 363837)","id":"432433993505","stav_prace":"Z","student_id":"5239006","PLATNOST_DO":""} ,{"tema":"Framework pro n\u00E1vrh responzivn\u00EDho u\u017Eivatelsk\u00E9ho rozhran\u00ED nov\u00E9 generace","kdyzap":"08.11.2012","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Lukáš Rychtecký(rychtluk@fel.cvut.cz, os. č.: 355641)","id":"428569886405","stav_prace":"Z","student_id":"5246306","PLATNOST_DO":""} ,{"tema":"Automatick\u00E1 integrace byznys pravidel v adaptabiln\u00EDch u\u017Eivatelsk\u00FDch rozhran\u00EDch","kdyzap":"14.12.2012","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Karel Čemus(cemuskar@fel.cvut.cz, os. č.: 363802)","id":"435617774305","stav_prace":"Z","student_id":"5222406","PLATNOST_DO":""} ,{"tema":"Syst\u00E9m pro spr\u00E1vu literatury katedry po\u010D\u00EDta\u010D\u016F.","kdyzap":"27.09.2016","stav":"rezervované","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Petr Kalivoda(petr.kalivoda@gmail.com, os. č.: 372734)","id":"634439112005","stav_prace":"R","student_id":"9054806","PLATNOST_DO":""} ,{"tema":"N\u00E1stroj pro generov\u00E1n\u00ED dokumentace vzd\u00E1len\u00FDch rozhran\u00ED (API) webov\u00FDch slu\u017Eeb aplikac\u00ED Java Enterprise Edition","kdyzap":"10.02.2015","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"1801T040","obor_nazev":"Softwarové inženýrství","student_jmeno":"Tomáš Jiříček(jiricto2@fel.cvut.cz, os. č.: 372697)","id":"629272513105","stav_prace":"Z","student_id":"6500606","PLATNOST_DO":""} ,{"tema":"Backendov\u00E9 \u0159e\u0161en\u00ED slu\u017Eeb pro v\u00FDvoj\u00E1\u0159e mobiln\u00EDch aplikac\u00ED","kdyzap":"29.01.2013","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"MI-WSI","obor_nazev":"Webové a softwarové inženýrství","student_jmeno":"Tomáš Linhart(linhato2@fel.cvut.cz, os. č.: 363772)","id":"428798013805","stav_prace":"Z","student_id":"5409306","PLATNOST_DO":""} ,{"tema":"Middleware pro integraci studijn\u00EDch ud\u00E1lost\u00ED na \u010CVUT","kdyzap":"15.01.2013","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"MI-WSI","obor_nazev":"Webové a softwarové inženýrství","student_jmeno":"Václav Chalupa(chaluva2@fel.cvut.cz, os. č.: 363860)","id":"431761784905","stav_prace":"Z","student_id":"5420906","PLATNOST_DO":""} ,{"tema":"AOP Framework pro jazyk PHP","kdyzap":"17.12.2012","stav":"obhájené","vedouci_id":"317192000","vedouci":"Černý Tomáš","typ_prog":"N","obor_kod":"MI-WSI","obor_nazev":"Webové a softwarové inženýrství","student_jmeno":"Jan Machala(machaj20@fit.cvut.cz, os. č.: 355833)","id":"432658410505","stav_prace":"Z","student_id":"5409806","PLATNOST_DO":""} ];
+			/*
+			Please consider that the JS part isn't production ready at all, I just code it to show the concept of merging filters and titles together !
+			*/
+			$(document).ready(function(){
+				var fakulta = 104
+				var table = $('#profPSez').DataTable( {
+					lengthChange: true,
+					colReorder: true,
+					bInfo: true,
+					data: dataSet,
+					columns: [
+					          { data: 'tema' },
+					          { data: 'kdyzap' },
+					          { data: 'stav' },
+					          { data: 'vedouci' },
+					          { data: 'typ_prog' },
+					          { data: 'obor_kod' },
+					          { data: 'obor_nazev' },
+					          { data: 'student_jmeno' },
+ 					          { data: 'PLATNOST_DO' },
+					          { data: 'id' },
+					          { data: 'stav_prace' }
+					      ],
+					"columnDefs":[{ "type": 'czechString', "targets": 0 },
+					              { "type": 'czechString', "targets": 5 },
+					              { "type": 'czechString', "targets": 6 },
+					              {"targets":9, "render": function(data,type,full,meta)
+						 { 
+								if(full.vedouci_id=='317192000'){
+									var textik = '<a	href="javascript:editTzp('+data+');">Detail</a>';
+									if(full.stav_prace=="V"){
+										textik += '&nbsp;&nbsp;<a href="javascript:removeTzp('+data+');">Smazat</a>';
+									}
+									if(full.stav_prace=="R"){
+										textik += '&nbsp;&nbsp;<a href="javascript:agreeTzp('+data+');">Schválit rezervaci</a>';
+									}
+									if(full.stav_prace=="S"){
+										textik += '&nbsp;&nbsp;<a href="javascript:disAgreeTzp('+data+');">Zrušit rezervaci</a>';
+									}
+								return textik;
+								
+								} else {
+									var textik = '<a href="javascript:viewTzp('+data+');">Detail</a>';
+									return textik;
+								}
+							
+							
+						}},{"targets":10, "render": function(data,type,full,meta)
+							 { 
+							if((full.stav_prace!="Z") && (fakulta==104)) {
+								return '<a href="javascript:documentPDF('+full.student_id+','+full.id+')" title="Tisk návrhu zadání">Tisk návrhu zadání</a>';
+							} else {
+								if(full.stav_prace=="Z"){
+									return '<a href="javascript:documentZavPracePDF('+full.student_id+');" title="Tisk zadání">Tisk zadání</a>';
+								}else{
+									return "";
+								}
+							}
+								}}],
+					pageLength: 100,
+					aLengthMenu: [[5,10,15,20,25, 50, 75,100,125,150,200,250,500,750,1000, -1], [5,10,15,20,25, 50, 75,100,125,150,200,250,500,750,1000, "All"]],
+					language: {
+						"sEmptyTable":     "Tabulka neobsahuje žádná data",
+					    "sInfo":           "Zobrazuji _START_ až _END_ z celkem _TOTAL_ záznamů",
+					    "sInfoEmpty":      "Zobrazuji 0 až 0 z 0 záznamů",
+					    "sInfoFiltered":   "(filtrováno z celkem _MAX_ záznamů)",
+					    "sInfoPostFix":    "",
+					    "sInfoThousands":  " ",
+					    "sLengthMenu":     "Zobraz záznamů _MENU_",
+					    "sLoadingRecords": "Načítám...",
+					    "sProcessing":     "Provádím...",
+					    "sSearch":         "Hledat:",
+					    "sZeroRecords":    "Žádné záznamy nebyly nalezeny",
+					    "oPaginate": {
+					        "sFirst":    "První",
+					        "sLast":     "Poslední",
+					        "sNext":     "Další",
+					        "sPrevious": "Předchozí"
+					    },
+					    "oAria": {
+					        "sSortAscending":  ": aktivujte pro řazení sloupce vzestupně",
+					        "sSortDescending": "datatable.sSortDescending"
+					    }
+			        },
+			    buttons: [{
+			        text: 'Zobrazit filtr',
+			        action: function ( e, dt, node, config ) {
+			            showHideFilter(this);
+			        },
+			        className: "setfilterclass"
+			    }], "initComplete": function(settings, json){ 
+			        var info = this.api().page.info();
+			    },"sDom": '<"col-sm-6"B><"toolbar text-right"><rt><"col-sm-3"l><"col-sm-6 text-center"i><"col-sm-3"p>'
+				} );
+				
+				$("div.toolbar").html('<b>TIP:</b> Poklepáním na nadpis sloupce se tabulka podle vybraného sloupce seřadí.');
+
+				table.buttons().container()
+					.appendTo( '#profPSez_wrapper .col-sm-6:eq(0)' );
+				
+			   $('#profPSez thead #searchField td').each( function (i) {
+			       var title = $('#profPSez thead th').eq( $(this).index() ).text();
+			       if($(this).index()<9){
+			    	   $(this).html( '<input type="text" style="width:100%;" placeholder="" id="inputFilter'+i+'" data-index="'+i+'" />' );  
+			       }
+			   } );
+			   
+			 
+			   // Filter event handler
+			   $( table.table().container() ).on( 'keyup', '#searchField input', function () {
+				   
+				   filterRtzp[$(this).data('index')] = this.value;     
+				   if(this.value!="nic"){
+					   if($(this).data('index')==2){
+						   document.getElementById('noaccept').checked=false;
+						   document.getElementById('nofree').checked=false;
+					   }
+					   table
+			           .column( $(this).data('index') )
+			           .search( this.value )
+			           .draw();
+				   }else{
+					   
+					   table
+			           .column( $(this).data('index') )
+			           .search( '^$', true, false)
+			           .draw();
+				   }
+				   var json_str = JSON.stringify(filterRtzp);
+				   $.cookie('tzpFilter', json_str);  
+			   } );
+			   
+			   setFilter(table);
+			   
+			   if(document.getElementById('noaccept').checked){
+				   table
+		           .column( 2 )
+		           .search( '^(?:(?!obhájené).)*$', true, false )
+		           .draw();
+				   filterRtzp[8] = "true";
+				   var json_str = JSON.stringify(filterRtzp);
+				   $.cookie('tzpFilter', json_str);
+			   }
+			   table.column(3).visible(false);
+			   
+			   $('#noaccept').click(function(){
+			    	return filterApply();
+			    });
+			
+			    $('#nofree').click(function(){
+			    	return filterApply();
+			    });
+			    
+			    $('#allFakulta').click(function(){
+			    	viewTzpFakulty(table);
+			    });
+
+			    viewTzpFakulty(table);
+					
+			});
+			
+			jQuery.fn.dataTableExt.oSort['czechString-asc'] = function(a, b) {
+				return a.localeCompare(b);
+			}
+
+			jQuery.fn.dataTableExt.oSort['czechString-desc'] = function(a, b) {
+				return b.localeCompare(a);
+			}
+			
+			function setFilter(table){
+				var json_str = $.cookie('tzpFilter');
+				if(json_str!=null){
+					var filterTzp = JSON.parse(json_str);
+					var allfilter = filterTzp[0]+filterTzp[1]+filterTzp[2]+filterTzp[3]+filterTzp[4]+filterTzp[5]+filterTzp[6]+filterTzp[7];
+					if(allfilter!=''){
+						filterRtzp = filterTzp;
+						$('#searchField').show();
+
+						document.getElementById("inputFilter0").value = filterTzp[0];
+						table.column(0).search( filterTzp[0], true, false ).draw();
+						document.getElementById("inputFilter1").value = filterTzp[1];
+						table.column(1).search( filterTzp[1], true, false ).draw();
+						if(filterTzp[2]==""){
+							if(filterTzp[8]=="true"){
+								document.getElementById('noaccept').checked = true;
+							}else{
+								document.getElementById('noaccept').checked = false;
+							}
+							
+							if(filterTzp[9]=="true"){
+								document.getElementById('nofree').checked = true;
+							}else{
+								document.getElementById('nofree').checked = false;
+							}
+						
+							filterApply();
+						}else{
+							document.getElementById('noaccept').checked = false;
+							document.getElementById('nofree').checked = false;
+							document.getElementById("inputFilter2").value = filterTzp[2];
+							table.column(2).search( filterTzp[2], true, false ).draw();
+						}
+						
+						document.getElementById("inputFilter3").value = filterTzp[3];
+						table.column(3).search( filterTzp[3], true, false ).draw();
+						document.getElementById("inputFilter4").value = filterTzp[4];
+						table.column(4).search( filterTzp[4], true, false ).draw();
+						document.getElementById("inputFilter5").value = filterTzp[5];
+						table.column(5).search( filterTzp[5], true, false ).draw();
+						document.getElementById("inputFilter6").value = filterTzp[6];
+						table.column(6).search( filterTzp[6], true, false ).draw();
+						document.getElementById("inputFilter7").value = filterTzp[7];
+						table.column(7).search( filterTzp[7], true, false ).draw();
+						
+						
+					}else{
+//						alert(filterTzp[0]+filterTzp[1]+filterTzp[2]+filterTzp[3]+filterTzp[4]+filterTzp[5]+filterTzp[6]+filterTzp[7]+filterTzp[8]);
+						if(filterTzp[8]=="true"){
+							document.getElementById('noaccept').checked = true;
+						}else{
+							document.getElementById('noaccept').checked = false;
+						}
+						
+						if(filterTzp[9]=="true"){
+							document.getElementById('nofree').checked = true;
+						}else{
+							document.getElementById('nofree').checked = false;
+						}
+						
+					}
+					
+				}
+				filterApply();
+			}
+
+			function showHideFilter(filterButton){
+				if('Zrušit filtr'==filterButton.text()){
+					$('#searchField').hide();
+					filterButton.text('Zobrazit filtr');
+					$('#profPSez thead #searchField input').each( function (i) {
+					    $(this).val( '' );
+					    var table2 = $('#profPSez').DataTable();
+					    table2.search( '' ).columns().search( '' ).draw();
+					    filterRtzp[i]="";
+					    //alert(i);
+					} );
+					filterApply();
+					var json_str = JSON.stringify(filterRtzp);
+				  $.cookie('tzpFilter', json_str);
+				}else{
+					$('#searchField').show();
+					filterButton.text('Zrušit filtr');
+				}
+			}
+			
+			function documentPDF(id,idTema){
+				alert(id +" - "+idTema);
+				window.open("/kos/rest/rtzp/zavPraceNavrhPDF?stud_id="+id+"&idTema="+idTema);
+			}
+			
+			function documentZavPracePDF(id){
+				window.open("/kos/rest/rtzp/zavPracePDF?stud_id="+id);
+			}
+			
+			function filterApply(){
+				var table = $('#profPSez').DataTable();
+				var reg = '';
+				document.getElementById("inputFilter2").value = "";
+				if(document.getElementById('noaccept').checked){
+					reg = reg+'obhájené';
+					filterRtzp[8]="true";
+				}else{
+					filterRtzp[8]="false";
+				}
+				if(document.getElementById('nofree').checked){
+					if(reg!=''){
+						reg = reg+'|';
+					}
+					reg = reg+'volné';
+					filterRtzp[9]="true";
+				}else{
+					filterRtzp[9]="false";
+				}
+				//alert(reg);
+				var json_str = JSON.stringify(filterRtzp);
+	      $.cookie('tzpFilter', json_str);
+	            
+				if(reg!=''){
+					table.column( 2 ).search( '^(?:(?!'+reg+'))', true, false ).draw();
+				}else{
+					table.column( 2 ).search( '', true, false ).draw();
+				}
+			}
+			
+	</script>
+<script language="JavaScript">
+<!--
+var menu = new Menu(150, 60, 1, 6, 1, 5, 5, 5, 9, 100, 200);
+menu.add("Domů", "javascript:showWait();window.open('"+appName+"/toWelcome.do?page="+pageCode+"','_self')", "txt", 1, -1, "#ffffff", "#cc0033");
+menu.add("Předměty", "", "txt", 2, -1, "#ffffff", "#cc0033");
+menu.add("Prezenční seznamy", "javascript:showWait();window.open('"+appName+"/studentprezsez.do?page="+pageCode+"','_self')", "txt", 21, 2, "#99ccff", "#cc0033");
+menu.add("Editace textů předmětů", "javascript:showWait();window.open('"+appName+"/textSubject.do?page="+pageCode+"','_self')", "txt", 22, 2, "#99ccff", "#cc0033");
+menu.add("Zkoušky", "", "txt", 3, -1, "#ffffff", "#cc0033");
+menu.add("Vypisování termínů", "javascript:showWait();window.open('"+appName+"/terminy.do?page="+pageCode+"','_self')", "txt", 31, 3, "#99ccff", "#cc0033");
+menu.add("Přehled vypsaných termínů", "javascript:showWait();window.open('"+appName+"/prehledVypsanychTerminu.do?page="+pageCode+"','_self')", "txt", 32, 3, "#99ccff", "#cc0033");
+menu.add("Přehled přihlášených studentů na termín", "javascript:showWait();window.open('"+appName+"/previewsStudents.do?page="+pageCode+"','_self')", "txt", 33, 3, "#99ccff", "#cc0033");
+menu.add("Zápis známky dle vypsaného zkouškového termínu", "javascript:showWait();window.open('"+appName+"/writeTerm.do?page="+pageCode+"','_self')", "txt", 34, 3, "#99ccff", "#cc0033");
+menu.add("Zápis známky studentovi (bez vypsaného termínu)	", "javascript:showWait();window.open('"+appName+"/writeStudent.do?page="+pageCode+"','_self')", "txt", 35, 3, "#99ccff", "#cc0033");
+menu.add("Vyhodnocení klasifikovanosti předmětu", "javascript:showWait();window.open('"+appName+"/examsOverview.do?page="+pageCode+"','_self')", "txt", 36, 3, "#99ccff", "#cc0033");
+menu.add("Zápočty", "", "txt", 4, -1, "#ffffff", "#cc0033");
+menu.add("Vypisování termínů", "javascript:showWait();window.open('"+appName+"/terminy.do?page="+pageCode+"','_self')", "txt", 41, 4, "#99ccff", "#cc0033");
+menu.add("Přehled přihlášených studentů na termín", "javascript:showWait();window.open('"+appName+"/creditsPreviewStudents.do?page="+pageCode+"','_self')", "txt", 42, 4, "#99ccff", "#cc0033");
+menu.add("Zápis zápočtu dle termínu", "javascript:showWait();window.open('"+appName+"/writeCreditsTerm.do?page="+pageCode+"','_self')", "txt", 43, 4, "#99ccff", "#cc0033");
+menu.add("Zápis zápočtu dle předmětu", "javascript:showWait();window.open('"+appName+"/writeCredits.do?page="+pageCode+"','_self')", "txt", 44, 4, "#99ccff", "#cc0033");
+menu.add("Klasifikované zápočty", "", "txt", 5, -1, "#ffffff", "#cc0033");
+menu.add("Vypisování termínů", "javascript:showWait();window.open('"+appName+"/terminy.do?page="+pageCode+"','_self')", "txt", 51, 5, "#99ccff", "#cc0033");
+menu.add("Přehled přihlášených studentů na termín", "javascript:showWait();window.open('"+appName+"/clasifyCreditsPreviewsStudents.do?page="+pageCode+"','_self')", "txt", 52, 5, "#99ccff", "#cc0033");
+menu.add("Zápis klasifikovaného zápočtu dle termínu", "javascript:showWait();window.open('"+appName+"/writeClasifyCreditsTerm.do?page="+pageCode+"','_self')", "txt", 53, 5, "#99ccff", "#cc0033");
+menu.add("Zápis klasifikovaného zápočtu dle předmětu", "javascript:showWait();window.open('"+appName+"/writeClasifyCredits.do?page="+pageCode+"','_self')", "txt", 54, 5, "#99ccff", "#cc0033");
+menu.add("Akce", "", "txt", 6, -1, "#ffffff", "#cc0033");
+menu.add("Jednorázové akce", "javascript:showWait();window.open('"+appName+"/oneShotActions.do?page="+pageCode+"','_self')", "txt", 61, 6, "#99ccff", "#cc0033");
+menu.add("Přehled studentů dle akce", "javascript:showWait();window.open('"+appName+"/oneShotActionStudents.do?page="+pageCode+"','_self')", "txt", 62, 6, "#99ccff", "#cc0033");
+menu.add("Vyhodnocení akce", "javascript:showWait();window.open('"+appName+"/oneShotActionResults.do?page="+pageCode+"','_self')", "txt", 63, 6, "#99ccff", "#cc0033");
+menu.add("Historie klasifikace", "javascript:showWait();window.open('"+appName+"/resultsHistory.do?page="+pageCode+"','_self')", "txt", 7, -1, "#ffffff", "#cc0033");
+menu.add("Ostatní", "", "txt", 8, -1, "#ffffff", "#cc0033");
+menu.add("Rámcová témata záverečných prací", "javascript:showWait();window.open('"+appName+"/rtzpProfesor.do?page="+pageCode+"','_self')", "txt", 81, 8, "#99ccff", "#cc0033");
+menu.add("Témata záverečných prací", "javascript:showWait();window.open('"+appName+"/tzpProfesor.do?page="+pageCode+"','_self')", "txt", 82, 8, "#99ccff", "#cc0033");
+menu.add("Moje závěrečné práce", "javascript:showWait();window.open('"+appName+"/vskpProfesor.do?page="+pageCode+"','_self')", "txt", 83, 8, "#99ccff", "#cc0033");
+menu.add("Časové omezení učitele", "javascript:showWait();window.open('"+appName+"/casoveOmezeniUcitele.do?page="+pageCode+"','_self')", "txt", 84, 8, "#99ccff", "#cc0033");
+menu.add("Školitel", "", "txt", 9, -1, "#ffffff", "#cc0033");
+menu.add("Moji doktorandi", "javascript:showWait();window.open('"+appName+"/myDoctorands.do?page="+pageCode+"','_self')", "txt", 91, 9, "#99ccff", "#cc0033");
+menu.add("Seznam ISP mých doktorandů", "javascript:showWait();window.open('"+appName+"/sezIsp.do?page="+pageCode+"','_self')", "txt", 92, 9, "#99ccff", "#cc0033");
+menu.add("Změna role", "javascript:showWait();window.open('"+appName+"/multilogin.do?page="+pageCode+"','_self')", "txt", 10, -1, "#ffffff", "#cc0033");
+menu.add("Odhlášení SSO", "javascript:showWait();window.open('"+appName+"/logout.do?page="+pageCode+"&LogoutAction_logoutClick=CERNYTO3','_self')", "txt", 11, -1, "#ffffff", "#cc0033");
+menu.createMenu();
+//-->
+</script></head><body onunload="KillClock();" marginwidth="0" marginheight="0" onload="onPageLoad();filterApply();" onmousedown="menu.hideAll();" onfocus="menu.hideAll();" onresize="menu.refresh();" data-gr-c-s-loaded="true"><span class="toolbarlow" id="menu-1item1normal" style="width: 54px; left: 150px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item1normaltext" style="top: 1.5px;">Domů</span></span><span class="toolbarlow" id="menu-1item2normal" style="width: 75px; left: 204px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item2normaltext" style="top: 1.5px;">Předměty</span></span><span class="toolbarlow" id="menu-1item3normal" style="width: 69px; left: 279px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item3normaltext" style="top: 1.5px;">Zkoušky</span></span><span class="toolbarlow" id="menu-1item4normal" style="width: 66px; left: 348px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item4normaltext" style="top: 1.5px;">Zápočty</span></span><span class="toolbarlow" id="menu-1item5normal" style="width: 145px; left: 414px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item5normaltext" style="top: 1.5px;">Klasifikované zápočty</span></span><span class="toolbarlow" id="menu-1item6normal" style="width: 49px; left: 559px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item6normaltext" style="top: 1.5px;">Akce</span></span><span class="toolbarlow" id="menu-1item7normal" style="width: 129px; left: 608px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item7normaltext" style="top: 1.5px;">Historie klasifikace</span></span><span class="toolbarlow" id="menu-1item8normal" style="width: 61px; left: 737px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item8normaltext" style="top: 1.5px;">Ostatní</span></span><span class="toolbarlow" id="menu-1item9normal" style="width: 63px; left: 798px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item9normaltext" style="top: 1.5px;">Školitel</span></span><span class="toolbarlow" id="menu-1item10normal" style="width: 84px; left: 861px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item10normaltext" style="top: 1.5px;">Změna role</span></span><span class="toolbarlow" id="menu-1item11normal" style="width: 107px; left: 945px; top: 60px; background-color: rgb(255, 255, 255);"><span class="menuToolbarNew normalToolbar" id="menu-1item11normaltext" style="top: 1.5px;">Odhlášení SSO</span></span><span class="columnlow" id="menu2item21normal" style="width: 153px; left: 205px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu2item21normaltext" style="top: 1.5px;">Prezenční seznamy</span><span class="arrow" id="menu2item21normalpicture" style="left: 158px; top: 5.5px;"><img name="menu2item21normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu2item22normal" style="width: 153px; left: 205px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu2item22normaltext" style="top: 1.5px;">Editace textů předmětů</span><span class="arrow" id="menu2item22normalpicture" style="left: 158px; top: 5.5px;"><img name="menu2item22normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu3item31normal" style="width: 312px; left: 280px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item31normaltext" style="top: 1.5px;">Vypisování termínů</span><span class="arrow" id="menu3item31normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item31normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu3item32normal" style="width: 312px; left: 280px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item32normaltext" style="top: 1.5px;">Přehled vypsaných termínů</span><span class="arrow" id="menu3item32normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item32normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu3item33normal" style="width: 312px; left: 280px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item33normaltext" style="top: 1.5px;">Přehled přihlášených studentů na termín</span><span class="arrow" id="menu3item33normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item33normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu3item34normal" style="width: 312px; left: 280px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item34normaltext" style="top: 1.5px;">Zápis známky dle vypsaného zkouškového termínu</span><span class="arrow" id="menu3item34normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item34normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu3item35normal" style="width: 312px; left: 280px; top: 166px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item35normaltext" style="top: 1.5px;">Zápis známky studentovi (bez vypsaného termínu)	</span><span class="arrow" id="menu3item35normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item35normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu3item36normal" style="width: 312px; left: 280px; top: 186px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu3item36normaltext" style="top: 1.5px;">Vyhodnocení klasifikovanosti předmětu</span><span class="arrow" id="menu3item36normalpicture" style="left: 317px; top: 5.5px;"><img name="menu3item36normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu4item41normal" style="width: 253px; left: 349px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item41normaltext" style="top: 1.5px;">Vypisování termínů</span><span class="arrow" id="menu4item41normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item41normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu4item42normal" style="width: 253px; left: 349px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item42normaltext" style="top: 1.5px;">Přehled přihlášených studentů na termín</span><span class="arrow" id="menu4item42normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item42normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu4item43normal" style="width: 253px; left: 349px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item43normaltext" style="top: 1.5px;">Zápis zápočtu dle termínu</span><span class="arrow" id="menu4item43normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item43normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu4item44normal" style="width: 253px; left: 349px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu4item44normaltext" style="top: 1.5px;">Zápis zápočtu dle předmětu</span><span class="arrow" id="menu4item44normalpicture" style="left: 258px; top: 5.5px;"><img name="menu4item44normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu5item51normal" style="width: 272px; left: 415px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item51normaltext" style="top: 1.5px;">Vypisování termínů</span><span class="arrow" id="menu5item51normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item51normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu5item52normal" style="width: 272px; left: 415px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item52normaltext" style="top: 1.5px;">Přehled přihlášených studentů na termín</span><span class="arrow" id="menu5item52normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item52normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu5item53normal" style="width: 272px; left: 415px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item53normaltext" style="top: 1.5px;">Zápis klasifikovaného zápočtu dle termínu</span><span class="arrow" id="menu5item53normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item53normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu5item54normal" style="width: 272px; left: 415px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu5item54normaltext" style="top: 1.5px;">Zápis klasifikovaného zápočtu dle předmětu</span><span class="arrow" id="menu5item54normalpicture" style="left: 277px; top: 5.5px;"><img name="menu5item54normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu6item61normal" style="width: 169px; left: 560px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu6item61normaltext" style="top: 1.5px;">Jednorázové akce</span><span class="arrow" id="menu6item61normalpicture" style="left: 174px; top: 5.5px;"><img name="menu6item61normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu6item62normal" style="width: 169px; left: 560px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu6item62normaltext" style="top: 1.5px;">Přehled studentů dle akce</span><span class="arrow" id="menu6item62normalpicture" style="left: 174px; top: 5.5px;"><img name="menu6item62normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu6item63normal" style="width: 169px; left: 560px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu6item63normaltext" style="top: 1.5px;">Vyhodnocení akce</span><span class="arrow" id="menu6item63normalpicture" style="left: 174px; top: 5.5px;"><img name="menu6item63normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu8item81normal" style="width: 223px; left: 738px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item81normaltext" style="top: 1.5px;">Rámcová témata záverečných prací</span><span class="arrow" id="menu8item81normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item81normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu8item82normal" style="width: 223px; left: 738px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item82normaltext" style="top: 1.5px;">Témata záverečných prací</span><span class="arrow" id="menu8item82normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item82normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu8item83normal" style="width: 223px; left: 738px; top: 126px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item83normaltext" style="top: 1.5px;">Moje závěrečné práce</span><span class="arrow" id="menu8item83normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item83normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu8item84normal" style="width: 223px; left: 738px; top: 146px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu8item84normaltext" style="top: 1.5px;">Časové omezení učitele</span><span class="arrow" id="menu8item84normalpicture" style="left: 228px; top: 5.5px;"><img name="menu8item84normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu9item91normal" style="width: 192px; left: 799px; top: 86px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu9item91normaltext" style="top: 1.5px;">Moji doktorandi</span><span class="arrow" id="menu9item91normalpicture" style="left: 197px; top: 5.5px;"><img name="menu9item91normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span><span class="columnlow" id="menu9item92normal" style="width: 192px; left: 799px; top: 106px; background-color: rgb(153, 204, 255); visibility: hidden;"><span class="normalColumn" id="menu9item92normaltext" style="top: 1.5px;">Seznam ISP mých doktorandů</span><span class="arrow" id="menu9item92normalpicture" style="left: 197px; top: 5.5px;"><img name="menu9item92normalimage" width="5" height="9" src="./Vse_files/blank.gif"></span></span>
+
+
+
+<script>
+
+
+var keep = false;
+var confirmation = false;
+
+var clockID = 0;
+var responseTime = 0;
+var title = document.title;
+var timeLimit = document.getElementById("sessionLimit");
+var maxInactiveInterval = 1200;
+var wasStopped = false;
+var	hasInnerText = false;	
+
+
+function ajaxRequest (url) {
+    var http_request = false;
+	var session_active = false;
+    if (window.XMLHttpRequest) { // Mozilla, Safari, Opera, Konqueror...
+        http_request = new XMLHttpRequest();
+    } else if (window.ActiveXObject) { // Internet Explorer
+        try {
+            http_request = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                http_request = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+				alert('Error creating the request object for MS IE!');
+			}
+        }
+    }
+
+    if (!http_request) {
+        alert('Connection ERROR!');
+        return false;
+    }
+	try {
+	    http_request.open('GET', appName + url, false);
+	    http_request.send(null);
+	    if (http_request.readyState == 4) {
+	        if (http_request.status == 200) {
+	            if (http_request.responseText=='session active'){
+					return true;
+				}
+	        } 
+	    }
+		alert('Chyba komunikace při pokusu obnovení relace! Server odmítl požadavek. ' + '\n\n' + '(ReadyState = ' + http_request.readyState + ', Status = ' + http_request.status + ', ResponseText = ' + http_request.responseText + ')');
+		keep=false;
+		confirmation=true;
+		return false;
+    } catch (e) {
+		alert('Chyba komunikace při pokusu obnovení relace! Server odmítl požadavek. ' + '\n\n' + e);
+		keep=false;
+		confirmation=true;
+		return false;
+	}
+
+}
+
+function UpdateClock() {
+	if(clockID) {
+		clearTimeout(clockID);
+		clockID  = 0;
+	}
+	var dateObject = new Date();
+	var sessionTime = (responseTime - Math.round(dateObject.getTime()/1000));
+//	document.title = title + " - " + Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+	if (hasInnerText){
+		timeLimit.innerText = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+	}else{
+		timeLimit.textContent = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+	}
+
+	if (sessionTime < 301){
+		if (keep==true){
+			if (ajaxRequest('/session.do')){
+				responseTime = Math.round(dateObject.getTime()/1000) + maxInactiveInterval;
+			}
+		}else if (confirmation==false){
+			confirmation=true;
+			var r=confirm('Aplikace za malou chvíli ztratí spojení na server a budete nuceni se znovu přihlásit. Přejete si zapnout funkci "Trvalé přihlášení" ?' + '\n\n' + '( Nastavení je možné později změnit volbou "Trvalé přihlášení" na úvodní stránce. Nastavení je dočasné a platí pouze do opuštění (odhlášení) aplikace. ) ' + '\n\n' + 'Udržovat relaci? ');
+			if (r==true){
+				if (ajaxRequest('/session.do?keepSession=true')){
+					responseTime = Math.round(dateObject.getTime()/1000) + maxInactiveInterval;
+					keep=true;
+				}
+	  		}else{
+				if (ajaxRequest('/session.do?keepSession=false')){
+					responseTime = Math.round(dateObject.getTime()/1000) + maxInactiveInterval;
+		  			keep=false;
+				}
+	  		}
+			var sessionKeepCheckbox = document.getElementById('sessionKeepCheck');
+			if (sessionKeepCheckbox!=null) sessionKeepCheckbox.checked = keep;
+		}
+	}
+	
+	if (sessionTime > 0){
+		clockID = setTimeout("UpdateClock()", 1000);
+	}else {
+//		document.title = title + " - " + Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec !session lost! ";
+		if (hasInnerText){
+			timeLimit.innerText = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+		}else{
+			timeLimit.textContent = Math.floor(sessionTime/60) + "min " + sessionTime%60 + "sec ";
+		}
+		wasStopped = true;
+	}
+}
+
+function setSessionTimeManualy() {
+
+	if (keep){
+//		var r=confirm('');
+//		if (r==true){
+			if (ajaxRequest('/session.do?keepSession=false')){
+				responseTime = Math.round((new Date()).getTime()/1000) + maxInactiveInterval;
+				confirmation=true;
+				keep=false;
+			}
+//		}
+	}else{
+//		var r=confirm('');
+//		if (r==true){
+			if (ajaxRequest('/session.do?keepSession=true')){
+				responseTime = Math.round((new Date()).getTime()/1000) + maxInactiveInterval;
+				confirmation=true;
+				keep=true;
+				if (wasStopped) clockID = setTimeout("UpdateClock()", 1000);
+			}
+//		}
+	}
+	var sessionKeepCheckbox = document.getElementById('sessionKeepCheck');
+	if (sessionKeepCheckbox!=null) sessionKeepCheckbox.checked = keep;
+}
+
+function getKeep() {
+	return keep;
+}
+
+function StartClock() {
+	responseTime = Math.round((new Date()).getTime()/1000) + 1200
+	clockID = setTimeout("UpdateClock()", 500);
+	if (timeLimit==null) timeLimit = document.getElementById("sessionLimit");
+	hasInnerText = (timeLimit.innerText != undefined) ? true : false;
+}
+
+function KillClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+}
+</script>
+
+ 
+
+
+
+
+	
+	
+	
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td class="headerBgColor">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					
+
+
+
+
+
+
+
+	 				<tbody><tr>
+					<td width="25" height="85" rowspan="2"><img src="./Vse_files/spacer.gif" width="25" height="85"></td>
+					<td width="100" height="85" rowspan="2"><img src="./Vse_files/logo.gif" width="100" height="85"></td>
+					<td width="25" height="85" rowspan="2"><img src="./Vse_files/spacer.gif" width="25" height="85"></td>
+					<td width="100%"> 
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td class="pageTitle" height="45" valign="bottom" nowrap="nowrap">STUDIJNÍ INFORMAČNÍ SYSTÉM (KOS)</td>
+
+								<td class="versionNumber" align="right" valign="top" style="padding-top: 16px" nowrap="nowrap"><span id="sessionLimit">19min 33sec </span>&nbsp;&nbsp;KOSI ver.: 18_07_02 b. 2589<br>&nbsp;&nbsp;DB ver.: CVUT (18.06.15243)</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+
+			
+			
+
+
+					<tr>
+						<td class="pageLocation" width="100%" height="40" align="right">Přehled témat závěrečných prací</td>
+						<td class="pageLocation" width="25" height="40"><img src="./Vse_files/spacer.gif" width="25" height="40"></td>
+					</tr>
+					
+<!--  
+		<tr id="notSupportedBrowser"  name="notSupportedBrowser">
+			<td align="left" colspan="5">
+				<div class="alert alert-warning">
+					<img src="images/!.png" style="padding-right:10px; vertical-align: middle"/>
+					<span style="line-height:27px; vertical-align: middle;">
+						Internetový prohlížeč, který používáte, není v aplikaci KOS podporován. Může se stát, že některé funkce nebudou fungovat správně. Bližší informace získáte <a href="http://intranet.cvut.cz/informace-pro-studenty/is/kos/pristup">zde</a>
+					</span>
+					<input type="button" id="notCookies" name="notCookies" value="Již nezobrazovat" onClick="closeInfo();"/>&nbsp;&nbsp;
+					<br>
+					<span id="browserNameVerion"  name="browserNameVerion"  style="line-height:12px; vertical-align: middle;font-size: 10px;">
+						
+					</span>
+				</div>
+			</td>
+		</tr>
+-->
+<tr id="notSupportedBrowser" name="notSupportedBrowser" style="display: none;">
+			<td colspan="5" class="information" style="width:100%">
+				<p style="vertical-align: middle;padding-right:5px;">
+					<img src="./Vse_files/!.png" style="padding-right:10px; vertical-align: middle">
+					Internetový prohlížeč, který používáte, není v aplikaci KOS podporován. Může se stát, že některé funkce nebudou fungovat správně. Bližší informace získáte <a href="http://intranet.cvut.cz/informace-pro-studenty/is/kos/pristup">zde</a>
+					<br>
+					<span id="browserNameVerion" name="browserNameVerion" style="line-height:12px;text-align:left;font-size: 10px;">
+					
+					</span>
+					<input type="button" id="notCookies" name="notCookies" value="Již nezobrazovat" onclick="closeInfo();" style="margin-left: 10px; display: none;">
+				</p>
+			</td>
+		</tr>
+
+
+			
+
+<script src="./Vse_files/jquery-migrate-1.2.1.js"></script>
+<script src="./Vse_files/jquery.cookie.js"></script>
+<script>
+var minimumFirefox=33;
+var minimumSafari=7;
+var minimumChrome=39;
+var minimumIE=11;
+
+	var supported = true;
+	var cookiesSupportBrowser=true;
+	if(bowser.name=="Microsoft Edge"){
+		
+	}else if(bowser.name=="Internet Explorer"){
+		if(bowser.version<minimumIE){
+			supported = false;
+		}
+	}else if(bowser.name=="Firefox"){
+		if(bowser.version<minimumFirefox){
+			supported = false;
+		}
+	}else if(bowser.name=="Safari"){
+		if(bowser.version<minimumSafari){
+			supported = false;
+		}
+	}else if(bowser.name=="iPad"){
+		if(bowser.version<minimumSafari){
+			supported = false;
+		}
+	}else if(bowser.name=="Chrome"){
+		if(bowser.version<minimumChrome){
+			supported = false;
+		}
+	}else{
+		if(!$.cookie('supportedBrowser')){
+			cookiesSupportBrowser = false;
+			supported = false;
+		}
+	}
+	
+	if(supported){
+		$("#notSupportedBrowser").hide();
+	}else{
+		$('#notSupportedBrowser').show();
+		$('#browserNameVerion').text("Váš prohlížeč se identifikuje jako: "+bowser.name+" - "+bowser.version);
+	}
+	if(cookiesSupportBrowser){
+		$("#notCookies").hide();
+	}else{
+		$('#notCookies').show();
+	}
+	
+	if($.cookie('supportedBrowser')){
+		$("#notSupportedBrowser").hide();
+	}
+	
+	function closeInfo(){
+		$("#notSupportedBrowser").hide();
+		$.cookie("supportedBrowser",true);
+	}   
+</script>
+
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tbody><tr>
+						<td><img src="./Vse_files/spacer.gif" width="10" height="0"></td>
+						<td width="100%">
+							<table cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tbody><tr>
+									<td class="textTitle" id="ocekavajiciAkci">Přehled témat závěrečných prací&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+
+
+								
+								
+								<tr>
+									<td>
+										<table cellspacing="0" cellpadding="0" border="0">
+											<tbody><tr>
+												<td class="boldText">Jméno učitele :&nbsp;</td>
+												<td class="text">Černý Tomáš</td>
+												<td><img src="./Vse_files/spacer.gif" width="50" height="1"></td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+								<tr>
+									<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+								<form name="tzpProfesor" method="post" action="https://kos.cvut.cz/kos/tzpProfesor.do"></form>
+									<input type="hidden" name="action" value="">
+									<input type="hidden" name="id" value="">
+									<input type="hidden" name="zobrazitTCelaFakulta" value="">
+									<tr>
+										<td><input type="button" value="Nové téma" onclick="newTzp()"></td>
+									</tr>
+								
+								<tr>
+									<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="pull-left">
+
+		                    <label class="checkbox-inline" style="color:black;"><input type="checkbox" id="allFakulta" value="">Zobrazit témata celé fakulty</label><br>
+		                    <label class="checkbox-inline" style="color:black;"><input type="checkbox" id="noaccept" value="" checked="checked" data-keeper-edited="yes">Zobrazit pouze aktuální témata (bez obhájených / neobhájených témat)</label><br>
+		                    <label class="checkbox-inline" style="color:black;"><input type="checkbox" id="nofree" value="">Zobrazit pouze práce s přihlášeným studentem (bez témat ve stavu volné)</label>		                    
+		                </div>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+										<div class="panel panel-primary filterable" style="border-color: white;">
+									     <div id="profPSez_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="col-sm-6"><div class="dt-buttons btn-group"><a class="btn btn-default setfilterclass" tabindex="0" aria-controls="profPSez" href="https://kos.cvut.cz/kos/tzpProfesor.do?page=a77fff5cb614bb72ea4efbb326377c#"><span>Zobrazit filtr</span></a></div></div><div class="toolbar text-right"><b>TIP:</b> Poklepáním na nadpis sloupce se tabulka podle vybraného sloupce seřadí.</div><div><table id="profPSez" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="profPSez_info" style="width: 100%;">
+													<thead>
+														<tr id="searchField" style="display:none;" role="row"><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter0" data-index="0"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter1" data-index="1"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter2" data-index="2"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter4" data-index="4"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter5" data-index="5"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter6" data-index="6"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter7" data-index="7"></td><td rowspan="1" colspan="1"><input type="text" style="width:100%;" placeholder="" id="inputFilter8" data-index="8"></td><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"></td></tr>
+				                    <tr class="tableHeader" role="row"><th class="sorting_asc" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="0" aria-label="Téma prácedatatable.sSortDescending" style="width: 530px;" aria-sort="ascending">Téma práce</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="1" aria-label="Poslední změna: aktivujte pro řazení sloupce vzestupně" style="width: 63px;">Poslední změna</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="2" aria-label="Stav: aktivujte pro řazení sloupce vzestupně" style="width: 67px;">Stav</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="4" aria-label="Typ prog.: aktivujte pro řazení sloupce vzestupně" style="width: 37px;">Typ prog.</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="5" aria-label="Kód oboru: aktivujte pro řazení sloupce vzestupně" style="width: 57px;">Kód oboru</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="6" aria-label="Název oboru: aktivujte pro řazení sloupce vzestupně" style="width: 153px;">Název oboru</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="7" aria-label="Přihlášený student: aktivujte pro řazení sloupce vzestupně" style="width: 319px;">Přihlášený student</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="8" aria-label="Platnost do: aktivujte pro řazení sloupce vzestupně" style="width: 45px;">Platnost do</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="9" aria-label="Akce: aktivujte pro řazení sloupce vzestupně" style="width: 130px;">Akce</th><th class="sorting" tabindex="0" aria-controls="profPSez" rowspan="1" colspan="1" data-column-index="10" aria-label="Akce: aktivujte pro řazení sloupce vzestupně" style="width: 99px;">Akce</th></tr>
+				                </thead>
+												<tbody>
+												
+												<tr role="row" class="odd"><td class="sorting_1">AOP Framework pro jazyk PHP</td><td>17.12.2012</td><td>obhájené</td><td>N</td><td>MI-WSI</td><td>Webové a softwarové inženýrství</td><td>Jan Machala(machaj20@fit.cvut.cz, os. č.: 355833)</td><td></td><td><a href="javascript:editTzp(432658410505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5409806);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Aplikace frameworku zabezpečení do systému pro správu chyb BugTrack</td><td>15.02.2011</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Ljubomir Mirkovski(mirkolju@fel.cvut.cz, os. č.: 370183)</td><td></td><td><a href="javascript:editTzp(275189904605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1412306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Aplikace pro podporu administrativy středních a základních škol</td><td>11.02.2013</td><td>obhájené</td><td>B</td><td>2612R062</td><td>Web a multimedia</td><td>Marie Hoťková(marie.hotkova@muvs.cvut.cz, os. č.: 372749)</td><td></td><td><a href="javascript:editTzp(450484441605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1698006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Aspektově orientovaný framework pro komunikaci Microservice</td><td>24.05.2018</td><td>volné</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td> (, os. č.: 0)</td><td></td><td><a href="javascript:editTzp(432879964005);">Detail</a>&nbsp;&nbsp;<a href="javascript:removeTzp(432879964005);">Smazat</a></td><td><a href="javascript:documentPDF(0,432879964005)" title="Tisk návrhu zadání">Tisk návrhu zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Aspektově orientovaný vývoj uživatelských rozhraní pro Android aplikace</td><td>07.01.2014</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Jiří Šebek(sebekji1@fel.cvut.cz, os. č.: 372052)</td><td></td><td><a href="javascript:editTzp(531591173605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6487906);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Aspektově orientovaný vývoj uživatelských rozhraní pro Java SE aplikace</td><td>19.02.2014</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Martin Tomášek(tomasma5@fel.cvut.cz, os. č.: 372445)</td><td></td><td><a href="javascript:editTzp(531592274305);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6523106);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Aukční systém pomocí Angular 2 a AspectFaces</td><td>16.01.2017</td><td>zadané</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Jaroslav Skala(jaraskala@seznam.cz, os. č.: 420402)</td><td></td><td><a href="javascript:editTzp(814192026705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7745706);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Automatická integrace byznys pravidel v adaptabilních uživatelských rozhraních</td><td>14.12.2012</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Karel Čemus(cemuskar@fel.cvut.cz, os. č.: 363802)</td><td></td><td><a href="javascript:editTzp(435617774305);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5222406);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Automatizace generování uživatelského rozhraní pro aplikaci eForm</td><td>14.11.2012</td><td>obhájené</td><td>N</td><td>1801T037</td><td>Počítačové inženýrství</td><td>Zdeněk Dušátko(dusatzde@fel.cvut.cz, os. č.: 364729)</td><td></td><td><a href="javascript:editTzp(428568551905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5532806);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Backendové řešení služeb pro vývojáře mobilních aplikací</td><td>29.01.2013</td><td>obhájené</td><td>N</td><td>MI-WSI</td><td>Webové a softwarové inženýrství</td><td>Tomáš Linhart(linhato2@fel.cvut.cz, os. č.: 363772)</td><td></td><td><a href="javascript:editTzp(428798013805);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5409306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">E-learningový systém pro střední školy</td><td>05.09.2011</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Michal Bukovský(bukovmi4@fel.cvut.cz, os. č.: 330042)</td><td></td><td><a href="javascript:editTzp(307047936105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16968904);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Elektronická podpora pro kolektivní překlad textu</td><td>08.11.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Evgenia Filkina(filkievg@fit.cvut.cz, os. č.: 373381)</td><td></td><td><a href="javascript:editTzp(337777010505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(2828706);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Energetický dopad technologie zobrazení webového uživatelského rozhraní na mobilním zařízení</td><td>26.11.2015</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Jan Helbich(janhelbich@gmail.com, os. č.: 393281)</td><td></td><td><a href="javascript:editTzp(698886583805);">Detail</a></td><td><a href="javascript:documentZavPracePDF(9075506);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Flexibilní modularizace zdrojového kódu</td><td>04.10.2017</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Filip Sedliský(f.sedlisky@gmail.com, os. č.: 411741)</td><td></td><td><a href="javascript:editTzp(886845153805);">Detail</a></td><td><a href="javascript:documentZavPracePDF(11514306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Framework pro distribuci webových zdrojů</td><td>19.04.2013</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Luboš Mátl(matllubo@fel.cvut.cz, os. č.: 363837)</td><td></td><td><a href="javascript:editTzp(432433993505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5239006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Framework pro nastavení síťových prostředků umožňující simulaci různých podmínek sítě</td><td>25.02.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Petr Praus(prauspet@fel.cvut.cz, os. č.: 363542)</td><td></td><td><a href="javascript:editTzp(266087157805);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16162804);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Framework pro návrh responzivního uživatelského rozhraní nové generace</td><td>08.11.2012</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Lukáš Rychtecký(rychtluk@fel.cvut.cz, os. č.: 355641)</td><td></td><td><a href="javascript:editTzp(428569886405);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5246306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Framework pro objektově-relační mapování v jazyce PHP</td><td>18.02.2013</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Václav Purchart(purchva1@fel.cvut.cz, os. č.: 363784)</td><td></td><td><a href="javascript:editTzp(450484384905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5245906);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Framework pro správu a vyhodnocení byznys pravidel s podporou transformace do různých platforem</td><td>19.02.2014</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Ondřej Mirtes(mirteond@fit.cvut.cz, os. č.: 363528)</td><td></td><td><a href="javascript:editTzp(532062079705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6499606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Framework pro testování P2P aplikací ve vědecké počítačové síti PlanetLab</td><td>05.12.2012</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Viktor Bohuslav Bohdal(viktor.bohdal@muvs.cvut.cz, os. č.: 363674)</td><td></td><td><a href="javascript:editTzp(434024932305);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5476606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Informační systém pro podporu automatizace výuky</td><td>08.01.2012</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Martin Tomášek(tomasma5@fel.cvut.cz, os. č.: 372445)</td><td></td><td><a href="javascript:editTzp(352987067305);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1689106);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Informační systém pro prodej bytů a domů</td><td>22.02.2010</td><td>obhájené</td><td>B</td><td>2612R051</td><td>Výpočetní technika</td><td>Jenefer Elizabeth Cubas Lopez(cubasjen@fel.cvut.cz, os. č.: 347797)</td><td></td><td><a href="javascript:editTzp(204067182805);">Detail</a></td><td><a href="javascript:documentZavPracePDF(15210704);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Integrace knihovny AspectFaces do frameworku Angular 2</td><td>23.11.2015</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Filip Ryšavý(rysavyfilip@gmail.com, os. č.: 420410)</td><td></td><td><a href="javascript:editTzp(703191492705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7754606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Integrace přenosu streamovaného videa do peer to peer sítě Elisa</td><td>21.12.2012</td><td>zadané</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Vladimír Klouček(kloucvla@fel.cvut.cz, os. č.: 363824)</td><td></td><td><a href="javascript:editTzp(432433973005);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5231606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Interaktivní personifikované přizpůsobení vzhledu pro identity &amp; access management řešení - Keycloak</td><td>09.10.2015</td><td>volné</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td> (, os. č.: 0)</td><td></td><td><a href="javascript:editTzp(694203150005);">Detail</a>&nbsp;&nbsp;<a href="javascript:removeTzp(694203150005);">Smazat</a></td><td><a href="javascript:documentPDF(0,694203150005)" title="Tisk návrhu zadání">Tisk návrhu zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Komplexní informační systém neziskové organizace</td><td>01.12.2014</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Vojtěch Koukal(koukavoj@fel.cvut.cz, os. č.: 372041)</td><td></td><td><a href="javascript:editTzp(613664771505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6522206);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Kontextová iOS aplikace pro MyICPC se sběrem contextu v IoT prostředí</td><td>13.12.2017</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Vladyslav Gorbunov(gorbuvla@seznam.cz, os. č.: 434997)</td><td></td><td><a href="javascript:editTzp(905424222905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(14746306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Media galerie mezinárodní soutěže v programování</td><td>12.01.2010</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Martin Kostolný(kostomar@fit.cvut.cz, os. č.: 356039)</td><td></td><td><a href="javascript:editTzp(194697737005);">Detail</a></td><td><a href="javascript:documentZavPracePDF(15743804);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Middleware interaktivní realtime aplikace MyICPC</td><td>21.05.2018</td><td>rezervované</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Vladyslav Gorbunov(vgorbunov96@gmail.com, os. č.: 434997)</td><td></td><td><a href="javascript:editTzp(796346673305);">Detail</a>&nbsp;&nbsp;<a href="javascript:agreeTzp(796346673305);">Schválit rezervaci</a></td><td><a href="javascript:documentPDF(9151606,796346673305)" title="Tisk návrhu zadání">Tisk návrhu zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Middleware pro integraci studijních událostí na ČVUT</td><td>15.01.2013</td><td>obhájené</td><td>N</td><td>MI-WSI</td><td>Webové a softwarové inženýrství</td><td>Václav Chalupa(chaluva2@fel.cvut.cz, os. č.: 363860)</td><td></td><td><a href="javascript:editTzp(431761784905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5420906);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Mobilní aplikace Kalorické Tabulky se synchronizací se sport trackery a integrací antropometrických údajů</td><td>10.12.2015</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Barbora Suchanová(barasuchanova@centrum.cz, os. č.: 420309)</td><td></td><td><a href="javascript:editTzp(708305790105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7748506);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Mobilní aplikace pro MyICPC sesběrem contextu v IoT prostředí</td><td>16.10.2017</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Filip Ryšavý(rysavyfilip@gmail.com, os. č.: 420410)</td><td></td><td><a href="javascript:editTzp(889972187505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(12937606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Mobilní aplikace Trampingo</td><td>14.01.2015</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Naim Ashhab(ashhanai@fel.cvut.cz, os. č.: 406402)</td><td></td><td><a href="javascript:editTzp(623631852605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6215006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Moderní webové rozhraní pro Chip DVD - počítačový magazín</td><td>08.12.2009</td><td>obhájené</td><td>B</td><td>2612R051</td><td>Výpočetní technika</td><td>Valentin Kostělej(kosteval@fel.cvut.cz, os. č.: 354955)</td><td></td><td><a href="javascript:editTzp(184335214705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(15641904);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Nástroj pro generování dokumentace vzdálených rozhraní (API) webových služeb aplikací Java Enterprise Edition</td><td>10.02.2015</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Tomáš Jiříček(jiricto2@fel.cvut.cz, os. č.: 372697)</td><td></td><td><a href="javascript:editTzp(629272513105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6500606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Nástroje pro automatizaci tvorby uživatelského rozhraní</td><td>22.01.2014</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Michal Řežábek(rezabmic@fel.cvut.cz, os. č.: 399284)</td><td></td><td><a href="javascript:editTzp(531593579205);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5830306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Nová generace architektur pro webové systémy</td><td>01.12.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Roman Smetana(smetarom@fel.cvut.cz, os. č.: 372030)</td><td></td><td><a href="javascript:editTzp(339388483405);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1675806);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Nová generace nástroje FormBuilder</td><td>13.01.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Václav Chalupa(chaluva2@fel.cvut.cz, os. č.: 363860)</td><td></td><td><a href="javascript:editTzp(270833749505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16187204);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Objevování bezpečnostních chyb ve zdrojovém kódu za použití dotazů v grafových databázích</td><td>16.01.2017</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Ondřej Skoumal(skoumal.ondra@gmail.com, os. č.: 368933)</td><td></td><td><a href="javascript:editTzp(814192002905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7737306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Porovnání frontendového vývoje webových aplikací s použitím AngularJS 2 a ReactJS s integrací AspectFaces</td><td>18.11.2015</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Zdeněk Brabec(zd.brabec@gmail.com, os. č.: 393141)</td><td></td><td><a href="javascript:editTzp(702935676005);">Detail</a></td><td><a href="javascript:documentZavPracePDF(9145606);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Prostředí pro simulace peer-to-peer aplikací s aplikací pro Cooperative Web Cache</td><td>13.01.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Slávka Jaroměřská(jaromsla@fel.cvut.cz, os. č.: 363863)</td><td></td><td><a href="javascript:editTzp(266087162405);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16187504);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Rozšíření knihovny pro JSFWiki knihovny o technologii AJAX</td><td>13.01.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Lukáš Rychtecký(rychtluk@fel.cvut.cz, os. č.: 355641)</td><td></td><td><a href="javascript:editTzp(270833758705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16178204);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Rozšíření systému pro správu chyb BugTrack o evidenci testů</td><td>14.03.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Josef Vítek(vitekjos@fel.cvut.cz, os. č.: 347257)</td><td></td><td><a href="javascript:editTzp(194894254005);">Detail</a></td><td><a href="javascript:documentZavPracePDF(15152104);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Rozšíření webového prohlížeče pro označování lidí na libovolných fotografiích na Internetu</td><td>10.12.2010</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Ondřej Mirtes(mirteond@fit.cvut.cz, os. č.: 363528)</td><td></td><td><a href="javascript:editTzp(265522205405);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16161404);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Sociální síť FELBoard</td><td>09.12.2011</td><td>obhájené</td><td>B</td><td>2612R062</td><td>Web a multimedia</td><td>Kateřina Hašlarová(haslakat@fit.cvut.cz, os. č.: 371911)</td><td></td><td><a href="javascript:editTzp(339630695705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1631006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Správa vzdáleného souborového systému přes webový prohlížeč</td><td>21.05.2010</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Marek Fišera(fiserma5@fel.cvut.cz, os. č.: 355822)</td><td></td><td><a href="javascript:editTzp(222609563605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(15718204);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Systém pro distribuci statických zdrojů urychlující načítání webových aplikací</td><td>13.01.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Luboš Mátl(matllubo@fel.cvut.cz, os. č.: 363837)</td><td></td><td><a href="javascript:editTzp(266087277105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16184704);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Systém pro personifikovaný pohled nad realtime událostmi soutěží, MyICPC</td><td>12.10.2015</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Roman Smetana(smetarom@gmail.com, os. č.: 372030)</td><td></td><td><a href="javascript:editTzp(630013833205);">Detail</a></td><td><a href="javascript:documentZavPracePDF(9046506);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Systém pro správu hotelové agendy</td><td>08.12.2010</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Róbert Varga(vargarob@fel.cvut.cz, os. č.: 339583)</td><td></td><td><a href="javascript:editTzp(191854314405);">Detail</a></td><td><a href="javascript:documentZavPracePDF(17019404);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Systém pro správu literatury katedry počítačů.</td><td>27.09.2016</td><td>rezervované</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Petr Kalivoda(petr.kalivoda@gmail.com, os. č.: 372734)</td><td></td><td><a href="javascript:editTzp(634439112005);">Detail</a>&nbsp;&nbsp;<a href="javascript:agreeTzp(634439112005);">Schválit rezervaci</a></td><td><a href="javascript:documentPDF(9054806,634439112005)" title="Tisk návrhu zadání">Tisk návrhu zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Tlustý klient a webové služby pro systém správy projektu</td><td>19.12.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Kamil Procházka(prochka6@fel.cvut.cz, os. č.: 372558)</td><td></td><td><a href="javascript:editTzp(347235426705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1669306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Turistický webový portál nové generace</td><td>19.12.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Matúš Szépe(szepemat@fit.cvut.cz, os. č.: 371954)</td><td></td><td><a href="javascript:editTzp(346997797605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1701306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Univerzální knihovna pro validaci vstupních dat na klientské části webových aplikací</td><td>07.01.2014</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Jan Helbich(helbijan@fel.cvut.cz, os. č.: 393281)</td><td></td><td><a href="javascript:editTzp(531593636705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(4706306);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Vytvoření základu moderního datového skladu pro technologický startup</td><td>04.11.2016</td><td>zadané</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Martin Vrábeľ(koroslak@gmail.com, os. č.: 420422)</td><td></td><td><a href="javascript:editTzp(795347029905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7767006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Využití aspektově-orientovaného přístupu pro tvorbu adaptivních uživatelských rozhraní</td><td>25.02.2014</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Tomáš Turek(turekto5@fel.cvut.cz, os. č.: 372672)</td><td></td><td><a href="javascript:editTzp(531593697105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6522506);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Vývoj IoT aplikačního běhového prostředí</td><td>12.01.2017</td><td>obhájené</td><td>B</td><td>1801R035</td><td>Softwarové systémy</td><td>Adam Paulík(adampaulik@me.com, os. č.: 420408)</td><td></td><td><a href="javascript:editTzp(813655181205);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7752406);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Vývojové prostředí budoucnosti aneb integrace CASE nástroje do vývojového prostředí</td><td>08.10.2009</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Ota Švimberský(svimbota@fel.cvut.cz, os. č.: 330411)</td><td></td><td><a href="javascript:editTzp(181542838205);">Detail</a></td><td><a href="javascript:documentZavPracePDF(17016604);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Vzdálené uživatelské rozhraní pro řídící systém experimentu COMPASS v CERN</td><td>18.10.2016</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Antonín Květoň(kvetoant@fjfi.cvut.cz, os. č.: 394859)</td><td></td><td><a href="javascript:editTzp(791333763405);">Detail</a></td><td><a href="javascript:documentZavPracePDF(12249806);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Webová platforma umožňující chovatelům nabízet svůj odchov</td><td>07.01.2014</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Marek Polcar(polcama1@fel.cvut.cz, os. č.: 354995)</td><td></td><td><a href="javascript:editTzp(528514333905);">Detail</a></td><td><a href="javascript:documentZavPracePDF(5478006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Webové služby media galerie mezinárodní soutěže v programování</td><td>01.03.2010</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Pavel Jíra(jirapave@fit.cvut.cz, os. č.: 350080)</td><td></td><td><a href="javascript:editTzp(192234470005);">Detail</a></td><td><a href="javascript:documentZavPracePDF(15744604);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Webový framework pro prezentaci dat na klientské straně</td><td>12.10.2015</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Kamil Procházka(prochazka.kamil@gmail.com, os. č.: 372558)</td><td></td><td><a href="javascript:editTzp(610506983105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(8040206);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Webový systém pro podporu sociálních aktivit</td><td>19.12.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Jan Minařík(minarja4@fel.cvut.cz, os. č.: 372248)</td><td></td><td><a href="javascript:editTzp(346997819305);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1727006);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Webový systém pro správu bodů zájmu</td><td>19.12.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Vojtěch Koukal(koukavoj@fel.cvut.cz, os. č.: 372041)</td><td></td><td><a href="javascript:editTzp(346997811805);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1688206);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Wiki knihovna pro Java Enterprise Edition aplikace</td><td>22.12.2010</td><td>obhájené</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Petr Dytrych(dytrypet@fel.cvut.cz, os. č.: 339187)</td><td></td><td><a href="javascript:editTzp(182759769005);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16973504);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Zabezpečení a správa znalostí pro JSF Wiki knihovnu</td><td>08.03.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Petr Janouch(janoupe8@fit.cvut.cz, os. č.: 363762)</td><td></td><td><a href="javascript:editTzp(275189876105);">Detail</a></td><td><a href="javascript:documentZavPracePDF(16175804);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Zabezpečení automaticky generovaných REST služeb</td><td>12.10.2015</td><td>obhájené</td><td>N</td><td>1801T040</td><td>Softwarové inženýrství</td><td>Martin Egermajer(egermma1@fel.cvut.cz, os. č.: 372691)</td><td></td><td><a href="javascript:editTzp(568841758605);">Detail</a></td><td><a href="javascript:documentZavPracePDF(6490906);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="odd"><td class="sorting_1">Zabezpečení v P2P sítích kryptografických měn</td><td>12.06.2014</td><td>zadané</td><td>N</td><td>2612T051</td><td>Výpočetní technika</td><td>Dmytro Gogulinskyy(goguldmy@fel.cvut.cz, os. č.: 358319)</td><td></td><td><a href="javascript:editTzp(569093863705);">Detail</a></td><td><a href="javascript:documentZavPracePDF(7135506);" title="Tisk zadání">Tisk zadání</a></td></tr><tr role="row" class="even"><td class="sorting_1">Zabezpěčení web aplikací na platformě Java Enterprise Edition</td><td>01.12.2011</td><td>obhájené</td><td>B</td><td>3902R031</td><td>Softwarové inženýrství</td><td>Michal Trnka(trnkami1@fel.cvut.cz, os. č.: 372925)</td><td></td><td><a href="javascript:editTzp(342018431505);">Detail</a></td><td><a href="javascript:documentZavPracePDF(1735806);" title="Tisk zadání">Tisk zadání</a></td></tr></tbody><tbody>
+											</tbody></table></div><div class="col-sm-3"><div class="dataTables_length" id="profPSez_length"><label>Zobraz záznamů <select name="profPSez_length" aria-controls="profPSez" class="form-control input-sm" data-keeper-edited="yes" data-keeper-should-not-overwrite="true"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="125">125</option><option value="150">150</option><option value="200">200</option><option value="250">250</option><option value="500">500</option><option value="750">750</option><option value="1000">1000</option><option value="-1">All</option></select></label></div></div><div class="col-sm-6 text-center"><div class="dataTables_info" id="profPSez_info" role="status" aria-live="polite">Zobrazuji 1 až 68 z celkem 68 záznamů</div></div><div class="col-sm-3"><div class="dataTables_paginate paging_simple_numbers" id="profPSez_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="profPSez_previous"><a href="https://kos.cvut.cz/kos/tzpProfesor.do?page=a77fff5cb614bb72ea4efbb326377c#" aria-controls="profPSez" data-dt-idx="0" tabindex="0">Předchozí</a></li><li class="paginate_button active"><a href="https://kos.cvut.cz/kos/tzpProfesor.do?page=a77fff5cb614bb72ea4efbb326377c#" aria-controls="profPSez" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="profPSez_next"><a href="https://kos.cvut.cz/kos/tzpProfesor.do?page=a77fff5cb614bb72ea4efbb326377c#" aria-controls="profPSez" data-dt-idx="2" tabindex="0">Další</a></li></ul></div></div></div>
+											
+										</div>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+
+								<tr>
+									<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+								</tr>
+
+							</tbody></table>
+						</td>
+						<td><img src="./Vse_files/spacer.gif" width="10" height="0"></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+
+
+
+
+
+
+
+<tr>
+	<td width="100%">
+		<!-- paticka -->
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td colspan="99"><img src="./Vse_files/1pix_blue.gif" width="100%" height="2"></td>
+			</tr>
+			<tr>
+				<td><img src="./Vse_files/spacer.gif" width="1" height="10"></td>
+			</tr>
+			<tr> 
+				<td colspan="99">
+					<table width="100%" cellpadding="0" cellspacing="0">
+						<tbody><tr> 
+							<td nowrap="nowrap" width="33%" align="left" class="text"><img src="./Vse_files/spacer.gif" width="10" height="1">
+Provozovatel: Výpočetní a informační centrum
+							</td>
+							<td nowrap="nowrap" width="34%" align="center" class="text"></td>
+							<td nowrap="nowrap" width="33%" align="right" class="text">
+								<img src="./Vse_files/spacer.gif" width="20" height="1">
+								<a href="javascript:okno(&#39;https%3A%2F%2Fhelpdesk.cvut.cz%2Fjira%2Fsecure%2FCreateIssueDetails%21init.jspa%3Fpid%3D13461%26issuetype%3D6%26customfield_11400%3D10500%26components%3D13606&#39;)">
+									<i>
+HelpDesk ČVUT
+									</i>
+								</a>
+								<img src="./Vse_files/spacer.gif" width="20" height="1">
+								<a href="javascript:okno(&#39;helpCVUTcs/profesor/tzpProfesor.html&#39;)">
+									<i>Nápověda</i>
+								</a>
+								<img src="./Vse_files/spacer.gif" width="20" height="1">
+								<a class="logout" href="https://kos.cvut.cz/kos/logout.do?LogoutAction_logoutClick=CERNYTO3">
+									<i>Odhlášení  SSO</i>
+								</a>
+								<img src="./Vse_files/spacer.gif" width="10" height="1">
+							</td>
+						</tr>
+						<tr height="100%" valign="bottom"> 
+							<td nowrap="nowrap" width="33%" align="left" class="text"><img src="./Vse_files/spacer.gif" width="10" height="30"></td>
+							<td nowrap="nowrap" width="34%" align="center" class="text"></td>
+							<td nowrap="nowrap" width="33%" align="right" class="text"><img src="./Vse_files/spacer.gif" width="10" height="30"></td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+		</tbody></table>
+	</td>
+</tr>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6923369-8', 'auto');
+  ga('send', 'pageview');
+</script> 
+
+
+
+
+
+
+
+
+
+	</tbody></table>
+	<div id="wait" style="position: absolute; left: -200px; top: -100px; z-index: 200; visibility: visible;">
+  <table border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+
+            <td><img border="0" src="./Vse_files/wait00.gif" width="197" height="40"><br><img border="0" src="./Vse_files/wait02.gif" width="197" height="16"></td>
+
+			<td><img border="0" src="./Vse_files/tienh.gif"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><img border="0" src="./Vse_files/tiend.gif"></td>
+          </tr>
+        </tbody></table>
+</div>
+
+
+<script>
+</script>
+<style></style></body></html>

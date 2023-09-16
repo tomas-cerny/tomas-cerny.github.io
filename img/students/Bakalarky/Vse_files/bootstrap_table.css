@@ -1,0 +1,48 @@
+.filterable {
+    margin-top: 5px;
+}
+.panel-heading{
+	background-color: white;
+	border-color: white;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+    height: 0px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: 15px;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: white;
+    height: 15px;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: white;
+    height: 15px;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: white;
+    height: 15px;
+}
+.form-control{
+	font-size: 12px;
+}
+.tableHeaderBoot{
+	font-size: 12px;
+	text-align: center;
+	padding: 2px;
+}
+.colStyleBoot{
+	text-align: left;
+	padding: 2px;
+}
+
+.table .form-control{
+	padding: 0px 5px;
+}
+

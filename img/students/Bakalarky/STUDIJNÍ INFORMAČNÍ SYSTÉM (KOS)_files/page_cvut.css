@@ -1,0 +1,825 @@
+a
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #336699;
+}
+a:active { color: #336699; }
+a:link { color: #336699; } 
+a:hover { color: #99ccff; }
+
+.pageTitle
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.headerBgColor
+{
+	background-color: #336699;
+}
+
+.pageLocation
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	color: #cccccc;
+}
+
+.versionNumber
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #cccccc;
+}
+
+.textTitle
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.textSubTitle
+{
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+}
+
+.text
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+.boldText
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.smallText
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+
+.studentDetailTitle {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #000000;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.tableHeader
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+.tableHeaderCenter
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+.tableHeaderLeft
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+.tableHeaderRight
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+	
+}
+.tableHeaderGreen
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #40a080;
+	height: 19px;
+}
+.tableHeaderGreenBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #40a080;
+	height: 19px;
+}
+.tableHeaderGreenLeft
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #ffffff;
+	background-color: #40a080;
+	height: 19px;
+}
+.tableHeaderSmall
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+
+.tableHeaderSmallLeft
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+.tableHeaderBackground
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+}
+a.tableHeader:link
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+a.tableHeader:hover
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #b0c0d0;
+	background-color: #336699;
+	height: 19px;
+}
+
+a.tableHeaderRight:link
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+a.tableHeaderRight:hover
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: #b0c0d0;
+	background-color: #336699;
+	height: 19px;
+}
+.tableRow1
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+/*	background-color: #ddeeff;*/
+	background-color: #ccddee;
+	height: 21px;
+
+}
+.tableRow1NoAlign
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #ccddee;
+	height: 21px;
+
+}
+tr.tableRow1 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ccddee;
+	height: 21px;
+/*    m: expression(this.onmouseover =  new Function("this.className = 'tableRow1-hover';"));*/
+}
+tr.tableRow1:hover,
+tr.tableRow1-hover {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffeeff;
+	height: 21px;
+/*    m: expression(this.onmouseout = new Function("this.className = 'tableRow1';"));*/
+}
+
+.tableRow2
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+/*	background-color: #ccddee;*/
+	background-color: #aabbcc;
+	height: 21px;
+}
+.tableRow2NoAlign
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #aabbcc;
+	height: 21px;
+}
+tr.tableRow2 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #aabbcc;
+	height: 21px;
+/*    m: expression(this.onmouseover =  new Function("this.className = 'tableRow2-hover';"));*/
+}
+tr.tableRow2:hover,
+tr.tableRow2-hover {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffeeff;
+	height: 21px;
+/*    m: expression(this.onmouseout = new Function("this.className = 'tableRow2';"));*/
+}
+
+.tableRow3
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 21px;
+}
+.tableRowOldTerm
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ADADAD;
+	height: 21px;
+}
+.tableRowNewTerm
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ADADAD;
+	height: 21px;
+}
+.tableRow3NoAlign
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 21px;
+}
+tr.tableRow3 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 21px;
+/*    m: expression(this.onmouseover =  new Function("this.className = 'tableRow3-hover';"));*/
+}
+tr.tableRow3:hover,
+tr.tableRow3-hover {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffeeff;
+	height: 21px;
+/*    m: expression(this.onmouseout = new Function("this.className = 'tableRow3';"));*/
+}
+
+.tableRow4
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #bbbbbb;
+	height: 21px;
+}
+.tableRow4NoAlign
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #bbbbbb;
+	height: 21px;
+}
+tr.tableRow4 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #bbbbbb;
+	height: 21px;
+/*    m: expression(this.onmouseover =  new Function("this.className = 'tableRow4-hover';"));*/
+}
+tr.tableRow4:hover,
+tr.tableRow4-hover {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffeeff;
+	height: 21px;
+/*    m: expression(this.onmouseout = new Function("this.className = 'tableRow4';"));*/
+}
+
+.tableRow5
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffaa99;
+	height: 21px;
+}
+.tableRow5NoAlign
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background-color: #ffaa99;
+	height: 21px;
+}
+tr.tableRow5 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffaa99;
+	height: 21px;
+/*    m: expression(this.onmouseover =  new Function("this.className = 'tableRow5-hover';"));*/
+}
+tr.tableRow5:hover,
+tr.tableRow5-hover {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffeeff;
+	height: 21px;
+/*    m: expression(this.onmouseout = new Function("this.className = 'tableRow5';"));*/
+}
+
+tr.tableRowHidden {
+/*	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: black;
+	height: 21px;
+*/	display: none;
+}
+
+.tableRow1Left
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+	background-color: #ccddee;
+	height: 21px;
+}
+
+.tableRow2Left
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+	background-color: #aabbcc;
+	height: 21px;
+}
+.tableRow3Left
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 21px;
+}
+.tableRow4Left
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+	background-color: #bbbbbb;
+	height: 21px;
+}
+.tableRow5Left
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+	background-color: #ffaa99;
+	height: 21px;
+}
+
+.tableRow1Right
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #000000;
+	background-color: #ccddee;
+	height: 21px;
+}
+
+.tableRow2Right
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #000000;
+	background-color: #aabbcc;
+	height: 21px;
+}
+.tableRow3Right
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 21px;
+}
+.tableRow4Right
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #000000;
+	background-color: #bbbbbb;
+	height: 21px;
+}
+.tableRow5Right
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #000000;
+	background-color: #ffaa99;
+	height: 21px;
+}
+
+.ttSubjectRow1
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #ccddee;
+	height: 19px;
+}
+
+.ttSubjectRow2
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #aabbcc;
+	height: 19px;
+}
+
+.ttSubjectRow3
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 19px;
+}
+.ttSubjectRow3Left
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 19px;
+}
+
+.ttHeader
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+
+.ttDays
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+}
+
+.ttVolno
+{
+	background-color: #ffffff;
+}
+
+.ttPrednaska
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #ccddee;
+}
+
+.ttCviceni
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #cccccc;
+}
+
+.ttKolize
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #cc0033;
+	height: 38px;
+}
+
+.ttLaborator
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #BEE5C0;
+}
+
+.ttPrint
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+}
+
+.ttPrintBg
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #cccccc;
+}
+
+.ttPrintKolize
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #bbbbbb;
+	width: 60px;
+}
+
+.ttPrintBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+	width: 60px;
+}
+
+.ttPrinRowHeight {
+	height: 35px
+}
+.preslistPrint
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #000000;
+}
+.presPrintLeft
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	text-align: left;
+	color: #000000;
+}
+.preslistPrintBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+.preslistPrintLeftBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	color: #000000;
+}
+a.anchorTitle
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.logout
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #cc0033;
+}
+a.logout:active { color: #cc0033; }
+a.logout:link { color: #cc0033; } 
+a.logout:hover { color: #ff0000; }
+
+.errors
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #cc0033;
+}
+
+.printBreak
+{
+	page-break-after: always;
+}
+
+.needitovatelne {
+	background-color: #CCCCCC;
+}
+.information {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	text-align: right;
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFCC00;
+	height: 20px;
+}
+div.scrollableContent
+{
+/*	height: 390px;*/
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+tbody.scrollableContent
+{
+	height: 390px; 
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.inputText, .datepicker
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+.datepicker
+{
+/* nemazat!, ackoli je prazdny slouzi pro generovani datePickru*/
+}
+
+textarea.inputText
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+tr.tableRowWork
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffeeff;
+	height: 21px;
+}
+
+td.vertical, td.verticalThin {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	color: #000000;
+
+	height: 100px;
+}
+td.vertical > div {
+	transform: translate(0px, 30px) rotate(270deg);
+	-moz-transform: translate(0px, 30px) rotate(270deg); 
+	-webkit-transform: translate(0px, 30px) rotate(270deg);
+	-o-transform: translate(0px, 30px) rotate(270deg);
+	width: 30px;
+}
+
+td.verticalThin > div {
+	transform: translate(0px, 30px) rotate(270deg);
+	-moz-transform: translate(0px, 30px) rotate(270deg); 
+	-webkit-transform: translate(0px, 30px) rotate(270deg);
+	-o-transform: translate(0px, 30px) rotate(270deg);
+	width: 20px;
+}
+
+.verticalXXX { 
+	-webkit-writing-mode:vertical-rl; 
+	-ms-writing-mode:tb-rl; 
+	writing-mode:vertical-rl; 
+ }

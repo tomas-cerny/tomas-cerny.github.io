@@ -1,0 +1,379 @@
+body
+{
+	background-color: #ffffff;
+	margin: 0;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+td, th {
+	font-size: 12px;
+}
+
+th {
+	font-weight: bold;
+	text-align: center;
+}
+
+a
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #336699;
+}
+a:active { color: #336699; }
+a:link { color: #336699; } 
+a:hover { color: #99ccff; }
+
+.pageTitle
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.headerBgColor
+{
+	background-color: #336699;
+}
+
+.pageLocation
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	color: #cccccc;
+}
+
+.versionNumber
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #cccccc;
+}
+
+.textTitle
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.textSubTitle
+{
+        font-family: "Helvetica", "Arial", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+}
+
+.text
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+.boldText
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.smallText
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+
+.tableHeader
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+
+.tableRow1,.tableRow1Left,.tableRow1Right,.tableRow2,.tableRow2Left,.tableRow2Right
+{
+	text-align: center;
+	color: #000000;
+	height: 21px;
+}
+.tableRow1,.tableRow1Left,.tableRow1Right
+{
+	background-color: #ddeeff;
+}
+
+.tableRow2,.tableRow2Left,.tableRow2Right
+{
+	background-color: #ccddee;
+}
+
+.tableRow1Left,.tableRow2Left
+{
+	text-align: left;
+}
+
+
+.tableRow1Right,.tableRow2Right
+{
+	text-align: right;
+}
+
+.tableRow2Right
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: right;
+	color: #000000;
+	background-color: #ccddee;
+	height: 21px;
+}
+
+.ttSubjectRow1
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #ddeeff;
+	height: 19px;
+}
+
+.ttSubjectRow2
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #ccddee;
+	height: 19px;
+}
+
+.ttSubjectRow3
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #BEE5C0;
+	height: 19px;
+}
+
+.ttHeader
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+	height: 19px;
+}
+
+.ttDays
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #336699;
+}
+
+.ttVolno
+{
+	background-color: #ffffff;
+}
+
+.ttPrednaska
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #ddeeff;
+}
+
+.ttCviceni
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #cccccc;
+}
+
+.ttKolize
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #cc0033;
+	height: 38px;
+}
+
+.ttLaborator
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	text-align: center;
+	color: #000000;
+	background-color: #BEE5C0;
+}
+
+.ttPrint
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+}
+
+.ttPrintBg
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #cccccc;
+}
+
+.ttPrintKolize
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	background-color: #bbbbbb;
+	width: 60px;
+}
+
+.ttPrintBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+	width: 60px;
+}
+
+.preslistPrint
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+}
+.presPrintLeft
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000000;
+}
+.preslistPrintBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+.preslistPrintLeftBold
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #000000;
+}
+
+a.anchorTitle
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.logout
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #cc0033;
+}
+a.logout:active { color: #cc0033; }
+a.logout:link { color: #cc0033; } 
+a.logout:hover { color: #ff0000; }
+
+.errors, .warning
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	color: #cc0033;
+}
+
+.printBreak
+{
+	page-break-after: always;
+}
+
+.pismo
+{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #000000;
+	height: 21px;
+}
+
+br.spacer {
+}
+
+br.bigSpacer {
+	margin:5px;
+}
+
+.hidden {
+	display:none;
+}
+
+.disabled, input[disabled], textarea[disabled], select[disabled], button[disabled], textarea[disabled].inputText {
+/*	color: #656565;*/
+/*	border-style:solid;*/
+}
+
+.readonly, input[readonly], textarea[readonly], select[readonly], button[readonly], textarea[readonly].inputText {
+	color: #656565;
+	border-style:solid;
+}
+
+
+table.formTable{
+	border-collapse: collapse;
+}
+
+table.formTable td, table.formTable td {
+	border-style:solid;
+	border-right-width:10px;
+	border-color:white;
+	padding:0px;
+}

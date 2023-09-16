@@ -1,0 +1,73 @@
+span.toolbarlow
+{
+	position: absolute;
+	height: 20;
+	cursor: default;
+	z-index: 100;
+	width: 500;
+}
+
+span.columnlow
+{
+	position: absolute;
+	height: 20;
+	cursor: default;
+	visibility: hidden;
+	z-index: 100;
+	width: 500;
+}
+
+/*******************************************************************************************************/
+
+span.arrow
+{
+	position: absolute;
+}
+
+span.picture
+{
+	position: absolute;
+	left: 5;
+}
+
+/*******************************************************************************************************/
+
+span.activeToolbar
+{
+	position: absolute;
+	color: #ffffff;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	left: 10;	
+}
+
+span.normalToolbar
+{
+	position: absolute;
+	color: #000000;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	left: 10;
+}
+
+span.activeColumn
+{
+	position: absolute;
+	color: #ffffff;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	left: 10;
+}
+
+span.normalColumn
+{
+	position: absolute;
+	color: #000000;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	left: 10;
+}
