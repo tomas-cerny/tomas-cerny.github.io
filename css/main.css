@@ -2467,7 +2467,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7004606', e
 .banner-area .fullscreen {
   /* height: 750px !important; */
   height: calc(100vh - 270px);
-  min-height: 680px !important;
+  min-height: 480px !important;
 padding-top: 55px;
 }
 
